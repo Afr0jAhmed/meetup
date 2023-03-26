@@ -1,2 +1,3 @@
 # meetup
-social networking website
+
+creating a chatbot that will interact with the user
