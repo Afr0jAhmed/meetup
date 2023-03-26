@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Facebook Clone</title>
+  <link rel="stylesheet" href="new.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- <h1>Facebook Clone</h1> -->
+
+    <div class="inner">
+      <label for="message" id="posts">Post something:</label>
+      <input id="message" placeholder="Add hashtags here"></input><br><br>
+      <input type="file" id="image" accept="image/*" style="display:none">
+      <label for="image" id="pl">Photo</label>
+      <input type="file" id="video" accept="video/*" style="display:none">
+      <label for="video" id="vl">Video</label>
+      <button onclick="postMessage()" id="btn">Post</button>
+    </div>
+  </div>
+  <hr>
+  <div id="messages"></div>
+  <script>
+    // Array to store messages
+    let messages = [];
+    // function saveMessages() {
+    //         localStorage.setItem('messages', JSON.stringify(messages));
+    //     }
+
+    //     // Function to retrieve messages from local storage
+    //     function loadMessages() {
+    //         let storedMessages = localStorage.getItem('messages');
+    //         if (storedMessages) {
+    //             messages = JSON.parse(storedMessages);
+    //             displayMessages();
+    //         }
+    //     }
+
+    //     // Load messages from local storage on page load
+    //     loadMessages();
+
+    function postMessage() {
+      // Get the input elements
+      let messageInput = document.getElementById('message');
+      let imageInput = document.getElementById('image');
+      let videoInput = document.getElementById('video');
+
+      // Get the message text
+      let messageText = messageInput.value.trim();
+
+      // Get the image URL
+      let imageURL = null;
+      if (imageInput.files.length > 0) {
+        imageURL = URL.createObjectURL(imageInput.files[0]);
+      }
+
+      // Get the video URL
+      let videoURL = null;
+      if (videoInput.files.length > 0) {
+        videoURL = URL.createObjectURL(videoInput.files[0]);
+      }
+
+      // Return if message, image, and video are all empty
+      if (!messageText && !imageURL && !videoURL) return;
+
+      // Create a new message object with the text, image URL, video URL, and current time
+      let message = {
+        text: messageText,
+        imageURL: imageURL,
+        videoURL: videoURL,
+        //   timestamp: new Date()
+      };
+
+      // Add the message to the beginning of the messages array
+      messages.unshift(message);
+
+       // Save the messages to local storage
+      //  saveMessages();
+
+      // Clear the input fields
+      messageInput.value = '';
+      imageInput.value = '';
+      videoInput.value = '';
+
+      // Update the message display
+      displayMessages();
+    }
+
+    function displayMessages() {
+      // Get the messages container element
+      let messagesContainer = document.getElementById('messages');
+
+      // Clear the container
+      messagesContainer.innerHTML = '';
+
+      // Loop through the messages array and add each message to the container
+      for (let i = 0; i < messages.length; i++) {
+        let message = messages[i];
+
+        // Create a new message element
+        let messageElement = document.createElement('div');
+        messageElement.classList.add('message');
+
+        // Set the text content of the message element
+        let textElement = document.createElement('p');
+
+
+        messageElement.appendChild(textElement);
+        let btn = document.createElement("button");
+        btn.classList.add('like')
+        btn.textContent = "Like";
+        let remove = document.createElement('button');
+        remove.classList.add('remove');
+        remove.textContent = "Remove";
+        remove.addEventListener('click', function (event) {
+          messages.splice(i, 1);
+          displayMessages();
+        })
+
+        if (textElement) {
+          textElement.textContent = message.text;
+          messageElement.appendChild(btn);
+          messageElement.appendChild(remove);
+          // messageElement.appendChild(comm);
+        }
+
+
+
+        // Add the image to the message element, if present
+        if (message.imageURL) {
+          let imageElement = document.createElement('img');
+          imageElement.src = message.imageURL;
+          imageElement.classList.add('message-image');
+          messageElement.appendChild(imageElement);
+          messageElement.appendChild(btn);
+          messageElement.appendChild(remove);
+          // messageElement.appendChild(comm);
+        }
+
+        // Add the video to the message element, if present
+        if (message.videoURL) {
+          let videoElement = document.createElement('video');
+          videoElement.src = message.videoURL;
+          videoElement.width = 500;
+          videoElement.height = 500;
+          videoElement.setAttribute("controls", "controls");
+          videoElement.classList.add('message-video');
+          messageElement.appendChild(videoElement);
+          messageElement.appendChild(btn);
+          messageElement.appendChild(remove);
+          // messageElement.appendChild(comm);
+        }
+
+        // Set the timestamp of the message element
+        //   let timestampElement = document.createElement('span');
+        //   timestampElement.textContent = message.timestamp.toLocaleString();
+        //   messageElement.appendChild(timestampElement);
+
+        // Add the message element to the container
+        messagesContainer.appendChild(messageElement);
+      }
+    }
+  </script>
+</body>
