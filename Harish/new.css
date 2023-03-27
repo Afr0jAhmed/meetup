@@ -49,44 +49,58 @@
     /* margin-top:20px; */
      
 }
-.message-image{
-  
-}
-.like,.remove,.com{
-    margin:5px;
-    position:relative;
-    left:10px;
-    /* position: relative; */
-  background-color: #4CAF50;
-  border: none;
-  font-size: 18px;
-  color: #FFFFFF;
-  padding: 10px;
-  width: 100px;
-  text-align: center;
-  transition-duration: 0.4s;
-  text-decoration: none;
-  overflow: hidden;
-  cursor: pointer;
-}
-.like:after,.share:after,.com:after{
-    content: "";
-    background: #f1f1f1;
-    display: block;
-    position: absolute;
-    padding-top: 300%;
-    padding-left: 350%;
-    margin-left: -20px !important;
-    margin-top: -120%;
-    opacity: 0;
-    transition: all 0.8s
-}
-.like:active:after,.share:active:after,.com:active:after{
-    padding: 0;
-    margin: 0;
-    opacity: 1;
-    transition: 0s
-}
 .man{
     display:none;
+}
+i{
+    
+    margin-left:20px;
+}
+img{
+    display:block;
+}
+#limb{
+    font-size: 25px;    
+}
+#limb:hover{
+    color:blue;
+}
+#del{
+    font-size:25px;
+    margin-left:300px;
+    }
+#del:hover{
+    color:red;
+}
+p{
+    font-family:"Clarimo UD PE Medium";
+    background-color: beige;
+    margin:0px important!;
+}
+#come{
+    /* margin-left:20px; */
+    background-color:white;
+    padding:10px;
+}
+#time{
+    position:relative;
+    left:50%;
+}
+#share{
+    font-size:20px;
+    color:#00ff80;
+}
+#com{
+    font-size:25px;
+    color:#00bfff;
+}
+#share:active{
+    color:black;
+}
+#com:active{
+    color:black;
+}
+#spann{
+    margin-left:10px;
+    color:red;
 }
