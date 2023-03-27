@@ -15,16 +15,21 @@
     margin-top:10px;
     width:70%;
     height:28px;
-    border-radius: 20px;
+    border-radius:20px;
     border-color: aqua;
     /* box-shadow:5px 10px 18px red; */
 }
 .message{
     overflow:hidden;
     margin-top:20px;
-    border-radius: 20px;
+    border-radius: 0px;
+    max-width: 320px;
+    position:relative;
+    left:20%;
+    
     /* overflow-y:scroll; */
-    box-shadow:rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    /* box-shadow:rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; */
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 #pl{
     margin-left:105px; 
@@ -56,24 +61,31 @@ i{
     
     margin-left:20px;
 }
-img{
+/* img{
     display:block;
-}
+} */
 #limb{
-    font-size: 25px;    
+    font-size: 20px; 
+    padding:20px 0px;
+    color:#65676b;
+    /* font-family:"Clarimo UD PE Medium" ;    */
 }
 #limb:hover{
-    color:blue;
+    color:#80ff00;
 }
 #del{
     font-size:25px;
-    margin-left:300px;
+    margin-left:280px;
+    position:relative;
+    bottom:50px;
+    /* margin-left:250px; */
     }
 #del:hover{
     color:red;
 }
 p{
     font-family:"Clarimo UD PE Medium";
+    /* font-weight: bolder; */
     background-color: beige;
     margin:0px important!;
 }
@@ -81,26 +93,45 @@ p{
     /* margin-left:20px; */
     background-color:white;
     padding:10px;
+    height:50px;
 }
-#time{
+/* #time{
     position:relative;
     left:50%;
-}
+} */
 #share{
-    font-size:20px;
-    color:#00ff80;
+    font-size:18px;
+    color:#65676b;
+    padding:0px 7px;
 }
 #com{
-    font-size:25px;
-    color:#00bfff;
+    font-size:20px;
+    color:#65676b;
+    padding:0px 5px;
 }
 #share:active{
-    color:black;
+    color:#80ff00;
 }
 #com:active{
-    color:black;
+    color:#80ff00;
 }
 #spann{
+    position:relative;
+    bottom:25px;
     margin-left:10px;
-    color:red;
+    color:green;
+    font-weight:10px;
+    font-size:23px;
+    /* overflow:hidden; */
+}
+#suc{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    /* display:inline-block; */
+}
+.message-image{
+    max-height:400px;
+    min-width:320px;
+    
 }
