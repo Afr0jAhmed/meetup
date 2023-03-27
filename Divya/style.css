@@ -369,7 +369,7 @@ margin: 4px;
   margin: 4px 2px;
 }
 /* -------------------main-container-start------------ */
-.right-sidebar{
+.main-container{
   flex-basis: 47%;
   /* align-self: flex-start; */
 }
