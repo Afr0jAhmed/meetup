@@ -113,6 +113,7 @@
         btn.classList.add("fa", "fa-thumbs-up", "fa-thumbs-down");
         btn.setAttribute("onclick", "myFunction(this)")
         btn.setAttribute("id","limb");
+        btn.textContent=" like";
         let remove = document.createElement('i');
         remove.classList.add('fa', 'fa-trash-o');
         // remove.textContent = "Remove";
@@ -123,11 +124,13 @@
         })
         let sharebtn=document.createElement('i');
         sharebtn.setAttribute("id","share");
-        sharebtn.classList.add("fa", "fa-share-alt")
+        sharebtn.textContent="   Share";
+        sharebtn.classList.add("fa", "fa-share")
 
         let combtn=document.createElement('i');
         combtn.setAttribute("id","com");
         combtn.classList.add("fa","fa-comments-o")
+        combtn.textContent=" comment"
 
          // Create a new message element
          let messageElement = document.createElement('div');
@@ -138,10 +141,22 @@
         textElement.setAttribute("id","come")
         let spann=document.createElement('span');
         spann.setAttribute("id","spann")
+        
+        let don=document.createElement('img')
+        don.setAttribute("id","suc")
+        don.src=message.imageURL;
+        textElement.appendChild(don)
         spann.textContent=message.text;
         textElement.appendChild(spann)
+        textElement.appendChild(remove)
 
         messageElement.appendChild(textElement);
+
+        // let threedot=document.createElement('button')
+        // let three=document.createElement('i')
+        // three.classList.add("fas", "fa-ellipsis-v")
+        // threedot.appendChild(three)
+
 
         if (textElement) {
           spann.textContent = message.text;
@@ -149,7 +164,7 @@
           
           messageElement.appendChild(sharebtn); 
           messageElement.appendChild(combtn); 
-          messageElement.appendChild(remove);
+          // messageElement.appendChild(remove);
 
         }
 
@@ -165,7 +180,8 @@
          
           messageElement.appendChild(sharebtn);  
           messageElement.appendChild(combtn);  
-          messageElement.appendChild(remove);      
+          // messageElement.appendChild(remove); 
+          // messageElement.appendChild(threedot)     
         }
 
         // Add the video to the message element, if present
@@ -181,14 +197,11 @@
           
           messageElement.appendChild(combtn); 
           // messageElement.appendChild(comm);
-          messageElement.appendChild(remove);
+          // messageElement.appendChild(remove);
         }
 
         // Set the timestamp of the message element
-          let timestampElement = document.createElement('span');
-          timestampElement.setAttribute("id","time");
-          timestampElement.textContent = message.timestamp.toLocaleString();
-          textElement.appendChild(timestampElement);
+          // z
 
         // Add the message element to the container
         messagesContainer.appendChild(messageElement);
