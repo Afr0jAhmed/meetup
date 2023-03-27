@@ -1,21 +1,6 @@
-#results {
-  margin-top: 20px;
-}
-#recentSearches {
-  margin-top: 10px;
-  padding-left: 0;
-}
-#recentSearches li {
-  list-style-type: none;
-  display: inline-block;
-  margin-right: 10px;
-  cursor: pointer;
-}
 
 
-
-
-/* .search-container {
+.search-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,4 +36,9 @@
 .news-card-content {
   font-size: 16px;
   line-height: 1.5;
-} */
+}
+#news-container, #recent-searches{
+  display: flex;
+  width: 20%;
+  background: gainsboro;
+}
