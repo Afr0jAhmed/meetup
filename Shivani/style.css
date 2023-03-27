@@ -1,5 +1,54 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+#results {
+  margin-top: 20px;
 }
+#recentSearches {
+  margin-top: 10px;
+  padding-left: 0;
+}
+#recentSearches li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+
+
+
+/* .search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+#search-input {
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  width: 300px;
+  border-radius: 5px;
+}
+
+#recent-searches {
+  margin-left: 10px;
+}
+
+.news-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.news-card-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.news-card-content {
+  font-size: 16px;
+  line-height: 1.5;
+} */
