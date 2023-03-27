@@ -1,61 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
-     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <nav class="navbar">
         <div class="navbar-logo">
-          <a href="#">
-            <!-- meetup</a> -->
-            <img src="image/meetup.png" alt="Logo"></a>
+            <a href="#">
+                <img src="image/meetup.png" alt="Logo"></a>
         </div>
         <div class="search-btn">
-            <input type="text" id="srch" placeholder="Search"/>
-            <!-- <i class="fa fa-search"></i> -->
+            <i class="fa fa-search"></i>
+            <input type="text" id="srch" placeholder="Search" />
         </div>
         <div class="navbar-links" id="navbar-links">
-          <ul>
-            <li><a href="#" class="active"><i class="fas fa-home">
-                <div class="menu-items">Home</div>
-            </i></a></li>
-            <li><a href="#"><i class="fas fa-user-friends">
-                <div class="menu-items">My Network</div>
-            </i></a></li>
-            <li><a href="#"><i class="fas fa-briefcase">
-                <div class="menu-items">Jobs</div>
-            </i></a></li>
-            <li><a href="#"><i class="fas fa-comment-alt">
-                <div class="menu-items">Messaging</div>
-            </i></a></li>
-            <li><a href="#"><i class="fas fa-bell">
-                <div class="menu-items">Notifications</div>
-            </i></a></li>
-            <li><a href="#">
-                <img src="image/user.jpg" class="user-img" alt="Logo"></a>
-                <!-- <i class="fas fa-user">-->
-                <div class="menu-items">Me <i class="fas fa-angle-down"></i></div>
-            </i></a></li>
-            <li><a href="#"><i class="fas fa-grip">
-                <div class="menu-items">Tools</div>
-            </i></a></li>
-          </ul>
+            <ul>
+                <li><a href="#" class="active"><i class="fas fa-home">
+                            <div class="menu-items">Home</div>
+                        </i></a></li>
+                <li><a href="#"><i class="fas fa-user-friends">
+                            <div class="menu-items">My Network</div>
+                        </i></a></li>
+                <li><a href="#"><i class="fas fa-briefcase">
+                            <div class="menu-items">Jobs</div>
+                        </i></a></li>
+                <li><a href="#"><i class="fas fa-comment-alt">
+                            <div class="menu-items">Messaging</div>
+                        </i></a></li>
+                <li><a href="#"><i class="fas fa-bell">
+                            <div class="menu-items">Notifications</div>
+                        </i></a></li>
+                <li><a href="#">
+                        <img src="image/user.jpg" class="user-img" alt="Logo"></a>
+                    <!-- <i class="fas fa-user">-->
+                    <div class="menu-items">Me <i class="fas fa-angle-down"></i></div>
+                    </i></a>
+                </li>
+                <li><a href="#"><i class="fas fa-grip">
+                            <div class="menu-items">Tools</div>
+                        </i></a></li>
+            </ul>
         </div>
         <div class="navbar-toggle" id="navbar-toggle">
-          <i class="fas fa-bars"></i>
+            <i class="fas fa-bars"></i>
         </div>
-      </nav>
-      <!------------------ navbar end --------------------->
-      <div class="center">
+    </nav>
+    <!------------------ navbar end --------------------->
+    <div class="container">
+        <!-- ----------------------left-sidebar-------------------------------- -->
+        <div class="left-sidebar">
+            <div class="sidebar-profile-box">
+                <img src="image/profile-bg-img.jpg" width="100%">
+                <div class="sidebar-profile-info">
+                    <img src="image/user1.jpg">
+                    <h1>Divya Sharma</h1>
+                    <h3>Web Developer at Microsoft</h3>
+                    <ul>
+                        <li>your profile views<span>52</span></li>
+                        <li>your post views<span>900</span></li>
+                        <li>your connections<span>500+</span></li>
+                    </ul>
+                </div>
+                <div class="sidebar-profile-link">
+                    <a href="#"><img src="image/free.png">My items</a>
+                    <a href="#"><img src="image/premium.jpg">Try Premium</a>
+                </div>
+            </div>
+            <div class="sidebar-activity">
+                <h3>RECENT</h3>
+                <a href="#"><i class="fa-sharp fa-solid fa-clock-rotate-left" class="icon"></i>web Development</a>
+                <a href="#"><i class="fa-sharp fa-solid fa-clock-rotate-left" class="icon"></i>user interface</a>
+                <a href="#"><i class="fa-sharp fa-solid fa-clock-rotate-left" class="icon"></i>Online Learning</a>
+                <a href="#"><i class="fa-sharp fa-solid fa-clock-rotate-left" class="icon"></i>Learn Online</a>
+                <a href="#"><i class="fa-sharp fa-solid fa-clock-rotate-left" class="icon"></i>Group Learning</a>
+                <h3>Groups</h3>
+                <a href="#"><i class="fa-solid fa-user-group" class="icon"></i>Web Design Group</a>
+                <a href="#"><i class="fa-solid fa-user-group" class="icon"></i>HTML & CSS Learner</a>
+                <a href="#"><i class="fa-solid fa-user-group" class="icon"></i>Python &Javascript</a>
+                <a href="#"><i class="fa-solid fa-user-group" class="icon"></i>Learn Coding Online</a>
+                <h3>HASHTAG</h3>
+                <a href="#"><i class="fa-solid fa-hashtag" class="icon"></i>Learn Coding Online</a>
+                <a href="#"><i class="fa-solid fa-hashtag" class="icon"></i>Learn Coding Online</a>
+                <a href="#"><i class="fa-solid fa-hashtag" class="icon"></i>Learn Coding Online</a>
+                <a href="#"><i class="fa-solid fa-hashtag" class="icon"></i>Learn Coding Online</a>
+                <a href="#"><i class="fa-solid fa-hashtag" class="icon"></i>Learn Coding Online</a>
+                <div class="discover-more-links">
+                    <a href="#">Discover more</a>
+                </div>
+            </div>
+        </div>
+        <!-- --------------------------------main-container----------------------- -->
+        <div class="main-container"></div>
+        <!-- --------------------------------------right-sideba-------------------------------- -->
+        <div class="right-sidebar">
+            <div class="sidebar-news">
+                <i class="fa-solid fa-circle-exclamation" class="info-icon"></i> 
+                <h2>Trending news</h2>
+                <a href="#">High demand for skilled manpower</a>
+                <span>1d ago &middot; 10,943 readers</span>
 
-      </div>
-      <!-- --------------footer start------------------ -->
-      <div id="footer">
+                <a href="#">Careers growing horizontally too</a>
+                <span>10d ago &middot; 1,455 readers</span>
+
+                <a href="#">less worrk visa for Us,more for UK</a>
+                <span>23d ago &middot; 2,843 readers</span>
+
+                <a href="#">more hiring = higher confidence?</a>
+                <span>25d ago &middot; 1,313 readers</span>
+
+                <a href="#">Goutam Adani is the world's third richest</a>
+                <span>28d ago &middot; 4,121 readers</span>
+
+                <a href="#" class="read-more-links">Read More</a>
+            </div>
+            <div class="sidebar-ad">
+                <small>Ad &middot;&middot;&middot; </small>
+                <p>Master 5 principle of web design</p>
+                <div>
+                <img src="image/user1.jpg">
+                <img src="image/mi-icon.jpg" class="mi-icon">
+                </div>
+                <b>Brand and Demand in Xiomi</b>
+                <a href="#" class="ad-link">Learn More</a>
+            </div>
+            <div class="sidebar-useful-links">
+                <a href="#">About</a>
+                <a href="#">Accessibility</a>
+                <a href="#">Help center</a>
+                <a href="#">Privacy policy</a>
+                <a href="#">Advertising</a>
+                <a href="#">Get the App</a>
+                <a href="#">More</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- --------------footer start------------------ -->
+    <!-- <div id="footer">
         <div class="icon">
             <a class="btn btn-light btn-social mr-2"
                 href="https://www.facebook.com/profile.php?id=100070502261335"><i
@@ -81,7 +186,8 @@
                 <li><a href="#">Become an affiliate</a></li>
             </ul>
         </div>
-    </div>
-<script src="script.js"></script>      
+    </div> -->
+    <script src="script.js"></script>
 </body>
+
 </html>
