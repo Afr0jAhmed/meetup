@@ -16,7 +16,14 @@
 }
 
 #recent-searches {
-  margin-left: 10px;
+  /* display: flex; */
+  flex-direction: row;
+  margin-left: 400px;
+  padding: 30px;
+  
+}
+.search-item{
+  margin: 10px;
 }
 
 .news-card {
@@ -37,8 +44,12 @@
   font-size: 16px;
   line-height: 1.5;
 }
-#news-container, #recent-searches{
+#news-container{
   display: flex;
-  width: 20%;
+  flex-wrap: wrap;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  margin-left: 400px;
   background: gainsboro;
 }
