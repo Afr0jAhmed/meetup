@@ -1,9 +1,9 @@
-const navbarToggle = document.getElementById('navbar-toggle');
-const navbarLinks = document.getElementById('navbar-links');
+// const navbarToggle = document.getElementById('navbar-toggle');
+// const navbarLinks = document.getElementById('navbar-links');
 
-navbarToggle.addEventListener('click', () => {
-  navbarLinks.classList.toggle('active');
-});
+// navbarToggle.addEventListener('click', () => {
+//   navbarLinks.classList.toggle('active');
+// });
 
 let profileMenu = document.getElementById("profileMenu");
 
