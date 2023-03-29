@@ -1,55 +1,76 @@
 
-
-.search-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-#search-input {
-  padding: 10px;
+::selection{
+  color: #fff;
+  background: crimson;
+}
+.wrapper{
+  max-width: 450px;
+  margin: 150px auto;
+}
+.wrapper .search-input{
+  background: #fff;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+}
+.search-input input{
+  height: 40px;
+  width: 90%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0 60px 0 20px;
   font-size: 18px;
-  border: 1px solid #ccc;
-  width: 300px;
-  border-radius: 5px;
+  box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
 }
-
-#recent-searches {
-  /* display: flex; */
-  flex-direction: row;
-  margin-left: 400px;
-  padding: 30px;
-  
+.search-input.active input{
+  border-radius: 5px 5px 0 0;
 }
-.search-item{
-  margin: 10px;
+.search-input .autocom-box{
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 280px;
+  /* margin-top: 30px; */
+  /* overflow-y: -60px; */
 }
-
-.news-card {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin: 10px;
-  padding: 10px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+.search-input.active .autocom-box{
+  padding: 10px 8px;
+  opacity: 1;
+  pointer-events: auto;
 }
-
-.news-card-title {
+.autocom-box li{
+  list-style: none;
+  padding: 8px 12px;
+  display: none;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+}
+.search-input.active .autocom-box li{
+  display: block;
+}
+.autocom-box li:hover{
+  background: #efefef;
+}
+.search-input .icon{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  line-height: 40px;
   font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.news-card-content {
-  font-size: 16px;
-  line-height: 1.5;
-}
-#news-container{
-  display: flex;
-  flex-wrap: wrap;
-  width: 50%;
-  align-items: center;
-  justify-content: center;
-  margin-left: 400px;
-  background: gainsboro;
+  color: crimson;
+  cursor: pointer;
 }
