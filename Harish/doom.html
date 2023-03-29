@@ -3,16 +3,19 @@
 
 <head>
   <title>Facebook Clone</title>
-  <link rel="stylesheet" href="new.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+  
 </head>
 
 <body>
   <div class="container">
+    <div class="main-container">
     <!-- <h1>Facebook Clone</h1> -->
 
-    <div class="inner">
+    <!-- <div class="inner">
       <label for="message" id="posts">Post something:</label>
       <input id="message" placeholder="Add hashtags here"></input><br><br>
       <input type="file" id="image" accept="image/*" style="display:none">
@@ -20,58 +23,56 @@
       <input type="file" id="video" accept="video/*" style="display:none">
       <label for="video" id="vl">Video</label>
       <button onclick="postMessage()" id="btn">Post</button>
-      <!-- <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i> -->
-    </div>
+      <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i> -->
+    <!-- </div> -->
+    <div class="create-post">
+      <div class="create-post-input">
+          <img src="user12.jpg">
+          <textarea rows="2" id="message" placeholder="write a post"></textarea>
+
+      </div>
+      <div class="create-post-links">
+          <li><input type="file" id="image" accept="image/*" style="display:none">
+              <!-- <button class="fas">&#xf030</button> -->
+              <label for="image" id="pl" class="fas">&#xf030</label>Photo
+          </li>
+          <li><input type="file" id="video" accept="video/*" style="display:none">
+              <!-- <button class="fas">&#xf008</button> -->
+              <label for="video" id="vl" class="fas">&#xf008</label>Video
+          </li>
+          <li><button class="fas">&#xf073</button>Event</li>
+          <li><button onclick="postMessage()"></button>post</li>
+      </div>
+      </div>
+  </div>
   </div>
   <hr>
   <div id="messages"></div>
   <script>
     // Array to store messages
-    let messages = [];
-    // function saveMessages() {
-    //         localStorage.setItem('messages', JSON.stringify(messages));
-    //     }
-
-    //     // Function to retrieve messages from local storage
-    //     function loadMessages() {
-    //         let storedMessages = localStorage.getItem('messages');
-    //         if (storedMessages) {
-    //             messages = JSON.parse(storedMessages);
-    //             displayMessages();
-    //         }
-    //     }
-
-    //     // Load messages from local storage on page load
-    //     loadMessages();
+    let messages = [];    
     function myFunction(x) {
       x.classList.toggle("fa-thumbs-down");
     }
-
-
     function postMessage() {
       // Get the input elements
       let messageInput = document.getElementById('message');
       let imageInput = document.getElementById('image');
       let videoInput = document.getElementById('video');
-
       // Get the message text
       let messageText = messageInput.value.trim();
-
       // Get the image URL
       let imageURL = null;
       if (imageInput.files.length > 0) {
         imageURL = URL.createObjectURL(imageInput.files[0]);
       }
-
       // Get the video URL
       let videoURL = null;
       if (videoInput.files.length > 0) {
         videoURL = URL.createObjectURL(videoInput.files[0]);
       }
-
       // Return if message, image, and video are all empty
       if (!messageText && !imageURL && !videoURL) return;
-
       // Create a new message object with the text, image URL, video URL, and current time
       let message = {
         text: messageText,
@@ -79,36 +80,22 @@
         videoURL: videoURL,
           timestamp: new Date()
       };
-
       // Add the message to the beginning of the messages array
-      messages.unshift(message);
-
-      // Save the messages to local storage
-      //  saveMessages();
-
-      // Clear the input fields
+      messages.unshift(message);      
       messageInput.value = '';
       imageInput.value = '';
       videoInput.value = '';
-
-
       // Update the message display
       displayMessages();
-
     }
-
     function displayMessages() {
       // Get the messages container element
       let messagesContainer = document.getElementById('messages');
-
       // Clear the container
       messagesContainer.innerHTML = '';
-
       // Loop through the messages array and add each message to the container
       for (let i = 0; i < messages.length; i++) {
-        let message = messages[i];
-
-       
+        let message = messages[i];       
         let btn = document.createElement("i");
         btn.classList.add("fa", "fa-thumbs-up", "fa-thumbs-down");
         btn.setAttribute("onclick", "myFunction(this)")
@@ -131,31 +118,25 @@
         combtn.setAttribute("id","com");
         combtn.classList.add("fa","fa-comments-o")
         combtn.textContent=" comment"
-
          // Create a new message element
          let messageElement = document.createElement('div');
         messageElement.classList.add('message');
-
         // Set the text content of the message element
+        let spann=document.createElement('div');
+        spann.setAttribute("id","spann")
+        // messageElement.appendChild(spann)
         let textElement = document.createElement('div');
         textElement.setAttribute("id","come")
-        let spann=document.createElement('span');
-        spann.setAttribute("id","spann")
-        
+        // let spann=document.createElement('div');
+        // spann.setAttribute("id","spann")        
         let don=document.createElement('img')
         don.setAttribute("id","suc")
         don.src=message.imageURL;
         textElement.appendChild(don)
         spann.textContent=message.text;
-        textElement.appendChild(spann)
+        messageElement.appendChild(spann)
         textElement.appendChild(remove)
-
-        messageElement.appendChild(textElement);
-
-        // let threedot=document.createElement('button')
-        // let three=document.createElement('i')
-        // three.classList.add("fas", "fa-ellipsis-v")
-        // threedot.appendChild(three)
+        messageElement.appendChild(textElement);     
 
 
         if (textElement) {
@@ -167,22 +148,20 @@
           // messageElement.appendChild(remove);
 
         }
-
-
-
         // Add the image to the message element, if present
         if (message.imageURL) {
           let imageElement = document.createElement('img');
           imageElement.src = message.imageURL;
           imageElement.classList.add('message-image');
+          messageElement.appendChild(spann)
           messageElement.appendChild(imageElement);
           messageElement.appendChild(btn);
          
           messageElement.appendChild(sharebtn);  
-          messageElement.appendChild(combtn);  
-          // messageElement.appendChild(remove); 
-          // messageElement.appendChild(threedot)     
+          messageElement.appendChild(combtn); 
+             
         }
+        console.log(message)
 
         // Add the video to the message element, if present
         if (message.videoURL) {
@@ -193,19 +172,12 @@
           videoElement.setAttribute("controls", "controls");
           videoElement.classList.add('message-video');
           messageElement.appendChild(videoElement);
-          messageElement.appendChild(btn);
-          
-          messageElement.appendChild(combtn); 
-          // messageElement.appendChild(comm);
-          // messageElement.appendChild(remove);
-        }
-
-        // Set the timestamp of the message element
-          // z
-
-        // Add the message element to the container
+          messageElement.appendChild(btn);          
+          messageElement.appendChild(combtn);          
+        }      
         messagesContainer.appendChild(messageElement);
       }
     }
   </script>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </body>
