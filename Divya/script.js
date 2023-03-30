@@ -11,7 +11,7 @@ function toggleMenu(){
   profileMenu.classList.toggle("open-menu");
 }
 
-// -------------search bar-----------------------------
+// -Shivani code------------search bar-----------------------------
 let suggestions = [
   "Channel",
   "CodingLab",
