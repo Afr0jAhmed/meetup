@@ -2,6 +2,9 @@ let messages = [];
 function myFunction(x) {
     x.classList.toggle("fa-thumbs-down");
 }
+
+
+
 function postMessage() {
     // Get the input elements
     let messageInput = document.getElementById('message');
@@ -51,11 +54,105 @@ function displayMessages() {
         messageElement.classList.add('message');
 
         
+// ===================================================================
+
+     let dothis=document.createElement("div");
+     dothis.classList.add("post-activity");
+
+    //  let aaa=document.createElement('div');
+    //  dothis.appendChild(aaa);
+
+    //  let imm=document.createElement('img');
+    //  imm.setAttribute("src","message.imageURL");
+    //  imm.classList.add("post-activity-user-icon");
+    //  aaa.appendChild(imm);
+
+    //  let arrr=document.createElement('img');
+    //  arrr.setAttribute("src","image/down-arrow.png");
+    //  arrr.classList.add("post-activity-arrow-icon");
+    //  aaa.appendChild(arrr)
+
+     let bbb=document.createElement('div');
+     bbb.classList.add("post-activity-link")
+     dothis.appendChild(bbb)
+
+     let brrr=document.createElement('i')
+     brrr.classList.add("fa","fa-thumbs-up")
+     brrr.setAttribute("onclick","myFunction(this)")
+     bbb.appendChild(brrr);
+
+     let spaaa=document.createElement('span')
+     spaaa.textContent="like";
+     bbb.appendChild(spaaa)
 
 
-     let dothis=document.querySelector(".post-activity");
+     let ccc=document.createElement('div');
+     ccc.classList.add("post-activity-link")
+     dothis.appendChild(ccc)
 
-     console.log(dothis)
+     let crrr=document.createElement('i')
+     crrr.classList.add("fa-solid", "fa-comment-dots")
+     ccc.appendChild(crrr);
+
+     let sbaaa=document.createElement('span')
+     sbaaa.textContent="Comment";
+     sbaaa.classList.add("deet");
+    
+
+    //  sbaaa.setAttribute("onclick","work()");
+     ccc.appendChild(sbaaa)    
+
+
+
+    
+
+     let ddd=document.createElement('div');
+     ddd.classList.add("post-activity-link")
+     dothis.appendChild(ddd)
+
+     
+     let drrr=document.createElement('i')
+     drrr.classList.add("fa-solid","fa-share")
+     ddd.appendChild(drrr);
+
+     let scaaa=document.createElement('span')
+     scaaa.textContent="Share";
+     ddd.appendChild(scaaa)
+
+
+     
+     let eee=document.createElement('div');
+     eee.classList.add("post-activity-link")
+     dothis.appendChild(eee)
+
+     let errr=document.createElement('i')
+     errr.classList.add("fa-solid","fa-share")
+     eee.appendChild(errr);
+
+     let sdaaa=document.createElement('span')
+     sdaaa.textContent="Send";
+     eee.appendChild(sdaaa)
+
+     
+
+
+    //  ==============================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //  console.log(dothis)
+
+    
 
      
 
@@ -98,17 +195,27 @@ function displayMessages() {
         // combtn.textContent = " comment"
 
         let last=document.createElement('div');
+        last.classList.add("manee");
 
+        sbaaa.addEventListener('click', function (event) {
+            last.classList.toggle("manee")
+            // displayMessages();
+          })
+        
+          let textElement = document.createElement('div');
+          textElement.setAttribute("id", "come")
 
         let comim=document.createElement('img')
         comim.setAttribute("id","opo");
         comim.src = message.imageURL;
+        if(textElement){
+            comim.setAttribute("src","pride.png")
+        }
 
         let combox=document.createElement("input");
-        combox.setAttribute("id", "haha")
-        combox.setAttribute("placeholder","write a comment")
+        combox.setAttribute("id", "haha");
+        combox.setAttribute("placeholder","write a comment");
 
-        
         last.classList.add("last");
         last.appendChild(comim); 
         last.appendChild(combox);
@@ -122,7 +229,7 @@ function displayMessages() {
         let lscs = document.createElement('h3');
         lscs.setAttribute("id", "bnb");
 
-        lscs.textContent = "Divya pandey................."
+        lscs.textContent = "James Walton"
 
         let sps = document.createElement("p")
         sps.setAttribute("id", "any");
@@ -151,46 +258,46 @@ function displayMessages() {
         }
 
         
-        // Set the text content of the message element
-        let spann = document.createElement('div');
-        spann.setAttribute("id", "spann")
+        
         // messageElement.appendChild(spann)
-        let textElement = document.createElement('div');
-        textElement.setAttribute("id", "come")
+        // let textElement = document.createElement('div');
+        // textElement.setAttribute("id", "come")
         // let spann=document.createElement('div');
         // spann.setAttribute("id","spann")
 
         textElement.appendChild(dots);
+
+        // Set the text content of the message element
+        let spann = document.createElement('div');
+        spann.setAttribute("id", "spann")
 
 
 
         let don = document.createElement('img')
         don.setAttribute("id", "suc")
 
-        don.src = message.imageURL;
+        // don.src = message.imageURL;
+        don.setAttribute("src","pride.png")
         textElement.appendChild(don)
 
         textElement.appendChild(lscs);
         textElement.appendChild(sps)
         textElement.appendChild(spss)
 
-        spann.textContent = message.text;
-        messageElement.appendChild(spann)
-        // textElement.appendChild(remove)
         messageElement.appendChild(textElement);
+        messageElement.appendChild(spann)
+        spann.textContent = message.text;
+        // textElement.appendChild(remove)
+       
 
         // messageElement.appendChild(lscs);
 
 
         if (textElement) {
-            spann.textContent = message.text;
-            // messageElement.appendChild(btn);
-            // messageElement.appendChild(combtn);
-            // messageElement.appendChild(sharebtn);
-            // messageElement.appendChild(send);
-            // messageElement.appendChild(combox);
+            
             messageElement.appendChild(dothis);
             messageElement.appendChild(last)
+            spann.textContent = message.text; 
 
         }
         // Add the image to the message element, if present
@@ -207,6 +314,8 @@ function displayMessages() {
             // messageElement.appendChild(send)
             messageElement.appendChild(dothis);
             messageElement.appendChild(last)
+            
+            
 
         }
         console.log(message)
@@ -229,4 +338,5 @@ function displayMessages() {
         }
         messagesContainer.appendChild(messageElement);
     }
+
 }
