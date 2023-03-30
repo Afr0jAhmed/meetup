@@ -120,7 +120,7 @@ const inputBox = searchWrapper.querySelector("input");
 const suggBox = searchWrapper.querySelector(".autocom-box");
 const icon = searchWrapper.querySelector(".icon");
 let linkTag = searchWrapper.querySelector("a");
-let webLink;
+let webLink;      //variable webLink is declared to store the search query URL.
 
 // if user press any key and release
 inputBox.onkeyup = (e)=>{
