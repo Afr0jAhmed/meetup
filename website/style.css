@@ -988,3 +988,483 @@ a:hover {
 .fa-instagram:hover {
   color:blue;
 }
+
+/*--------------------------------------------------- harish part *----------------------------------/
+
+.main-container{
+  flex-basis: 47%;
+}
+.post{
+background-color: #fff;
+}
+.post-input{
+  padding: 20px 25px 10px;
+  display: flex;
+  align-items: flex-start;
+}
+.post-input img{
+  width: 50px;
+  border-radius:50% ;
+  margin-right: 10px;
+}
+.post-input textarea{
+  width: 100%;
+  border: 0;
+  outline: 0;
+  resize: none;
+  background: transparent;
+  margin-top: 8px;
+}
+::placeholder{
+  font-weight: 500;
+}
+.post-links{
+  display: flex;
+  align-items: flex-start;
+}
+.post-links li{
+  list-style: none;
+  border-top: 1px solid #ccc;
+  border-right:1px solid #ccc ;
+  flex-basis: 25%;
+  height: 40px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.post-links li i{
+  font-size: 15px;
+  color: crimson;
+  /* color: #045be6; */
+  margin-right: 5px;
+}
+.post-links li:last-child{
+  background: crimson;
+  color: #fff;
+  border-top: 0;
+  border-right: 0;
+}
+.short-list{
+display: flex;
+align-items: center;
+margin: 10px 0;
+}
+.short-list hr{
+  flex: 1;
+  border: 0;
+  height: 1px;
+  background: #ccc;
+}
+.short-list p{
+  font-size: 13px;
+  padding-left: 5px;
+}
+.short-list p span{
+  font-weight:600 ;
+  cursor: pointer;
+}
+.short-list p span i{
+  font-size: 12px;
+  margin-left: 3px;
+  
+}
+.posting{
+  background: #fff;
+  padding:20px 25px 5px ;
+  margin:5px 0 15px ;
+}
+.posting-write{
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.posting-write img{
+width: 45px;
+border-radius: 50%;
+margin-right: 10px;
+margin-top: 5px;
+}
+.posting-write h1{
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+.posting-write small{
+display: block;
+margin-bottom: -2px;
+}
+.posting p{
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.post-stats{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  flex-wrap: wrap;
+   font-size: 12px;
+   border-bottom: 1px solid #ccc;
+   padding-bottom: 6px;
+}
+.post-stats div{
+  display: flex;
+  align-items: center;
+}
+.message{
+  border-radius:40px;
+  margin-top:30px;
+}
+.manee{
+  display: none;
+}
+
+.post-stats i{
+  font-size: 15px;
+  margin-right: -5px;
+}
+.post-stats div .fa-thumbs-up{
+  color: #045be6;
+}
+.post-stats div .fa-heart{
+  color: red;
+}
+.post-stats div .fa-hands-clapping {
+color:gray;
+}
+.likes{
+  margin-left: 10px;
+}
+.post-activity{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+   font-size: 14px;
+   font-weight: 500;
+   padding: 10px 0;
+}
+.post-activity div{
+  display: flex;
+  align-items: center;
+}
+.post-activity-user-icon{
+  width: 22px;
+  border-radius: 50%;
+}
+.post-activity-arrow-icon{
+  width: 12px;
+  margin-left: 5px;
+}
+.post-activity-link i{
+font-size: 18px;
+margin-right: 20px;
+color:crimson;
+}
+#icon-color{
+  font-size: 10px;
+  margin-right:40px;
+  padding-left:40px;
+  color:crimson;
+  }
+  #suc{
+    border-radius: 50%;
+    width:50px;
+    height:50px;
+  }
+  #opo{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 2px;
+  }
+  .last{
+    box-sizing: border-box;
+    height: 56px;
+    border: 1px solid #d8f0ea;
+  }
+  #bnb,#any{
+    position:relative;
+    left:60px;
+    bottom:50px;
+    /* font-size:15px; */
+    width:60%;
+  }
+  #any{
+    font-size:12px;
+    
+  }
+  #dell{
+    position:relative;
+    left:508px;
+    bottom:25px;
+    
+  }
+  /* #dell:hover{
+    width:10px;
+    height:10px;
+    background-color:#7d8182;
+  } */
+  #del{
+    position:relative;
+    left:460px;
+    bottom:64px;
+  }
+#come{
+  background-color: #fff;
+  height:70px;
+}
+#spann{
+  background-color: #fff; 
+  padding:10px;
+  
+  padding-top: 0px;
+}
+
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Float cancel and delete buttons and add an equal width */
+.cancelbtn, .deletebtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add a color to the cancel button */
+.cancelbtn {
+  background-color: #ccc;
+  color: black;
+}
+
+/* Add a color to the delete button */
+.deletebtn {
+  background-color: #f44336;
+}
+
+/* Add padding and center-align text to the container */
+.container {
+  padding: 30px;
+  text-align: center;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 510px;
+  top: 230px;
+  
+  background-color: yellow;
+
+}
+
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  /* margin: 5% auto 15% auto; 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 100%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* The Modal Close Button (x) */
+.close {
+  position: absolute;  
+  right: 9px;
+  top: 0px;
+  font-size: 40px;
+  font-weight: bold;
+  color: lightcoral;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and delete button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .deletebtn {
+     width: 100%;
+  }
+}
+#haha{
+  
+  width: 87%;
+  padding: 8px;
+  margin: 7px;
+  border-radius: 25px;
+  margin-left: 9px;
+  border: 1px solid #545658;
+  position: relative;
+  bottom: 18px;
+}
+
+
+/* ------------profile-page--------------- */
+.profile-main{
+  flex-basis: 73%;
+}
+.profile-sidebar{
+  flex-basis: 25%;
+  align-self: flex-start;
+  position: sticky;
+  top: 73px;
+}
+.profile-box{
+  margin-top: 0px;
+  background: #fff;
+}
+
+.profile-box-inner{
+  padding: 0 4% 10px;
+}
+.profile-img{
+  width: 150px;
+  border-radius: 50%;
+  margin-top: -75px;
+  padding: 5px;
+  background: #fff;
+}
+.profile-box h1{
+font-size: 25px;
+font-weight: 500;
+color: #222;
+}
+.profile-box b{
+font-weight: 400;
+}
+.profile-box p{
+  margin-top: 5px;
+}
+.profile-box p a{
+  color: #045be6;
+  font-weight: 500;
+  text-decoration: none;
+}
+.connections{
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+.connections img{
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.profile-btn{
+  margin: 20px 0;
+}
+.profile-btn i{
+  font-size: 15px;
+  margin-right: 10px;
+  color: #fff;
+}
+.profile-btn a{
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  background: #e4e6eb;
+padding: 6px 15px; 
+border-radius: 4px;
+margin-right: 10px;
+}
+.profile-btn .btn1{
+  background:crimson;
+  color: #fff;
+}
+.profile-description{
+  background: #fff;
+  padding: 20px 4% 30px;
+  margin: 12px 0;
+}
+.about h2{
+  color: #333;
+  margin: 10px 0 20px;
+  font-weight: 600;
+}
+.more-links{
+  text-decoration: none;
+  color: #045be6;
+  display: block;
+  text-align: right;
+  font-size: 15px;
+}
+.profile-desc-row{
+  display: flex;
+  align-items: flex-start;
+  margin: 20px 0;
+}
+.profile-desc-row img{
+  width: 50px;
+  margin-right: 25px;
+  margin-top: 5px;
+}
+.profile-desc-row div{
+  width: 100%;
+}
+.profile-desc-row h3{
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+.profile-desc-row b{
+  display: block;
+  font-weight: 400;
+  font-size: 15px;
+}
+.profile-desc-row p{
+  margin-top: 15px;
+}
+.profile-desc-row hr{
+  border: 0;
+  border-bottom:1px solid #999 ;
+  margin-top: 15px;
+}
+.exp-link{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  font-weight: 500;
+  color: #045be6;
+}
+.exp-link img{
+  width: 18px;
+  margin-left: 10px;
+}
+
+/* ------------------------------------------------------------------------------------------------------ */

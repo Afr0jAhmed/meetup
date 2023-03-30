@@ -146,20 +146,23 @@
         <div class="main-container">
             <div class="post">
                 <div class="post-input">
-                    <img src="image/user1.jpg">
-                    <textarea rows="2" placeholder="Write a post"></textarea>
+                    <img src="./image/user1.jpg">
+                    <textarea rows="2" placeholder="Write a post" id="message"></textarea>
                 </div>
                 <div class="post-links">
-                    <li><i class="fa-sharp fa-solid fa-camera"></i>Photo</li>
-                    <li><i class="fa-solid fa-video"></i>Video</li>
+                    <li><label><i class="fa-sharp fa-solid fa-camera"><input type="file" id="image" accept="image/*"
+                                    style="display:none"></label></i>Photo</li>
+                    <li><label><i class="fa-solid fa-video"><input type="file" id="video" accept="video/*"
+                                    style="display:none"></i>Vedio</li>
                     <li><i class="fa-solid fa-calendar-days"></i>Event</li>
-                    <li>Post</li>
+                    <li><button onclick="postMessage()" style="background-color: none;">Post</button></li>
                 </div>
             </div>
             <div class="short-list">
                 <hr>
                 <p>Sort by: <span>top <i class="fa-sharp fa-solid fa-angle-down"></i></span></p>
             </div>
+            <div id="messages"></div>
             <div class="posting">
                 <div class="posting-write">
                     <img src="image/afroz.jpg">
@@ -720,6 +723,7 @@
     drift.load('gg7bm5wvziuk');
 </script>
 <!-- End of Async Drift Code -->
+<script src="doom.js"></script>
     
 </body>
 
