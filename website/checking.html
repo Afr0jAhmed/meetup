@@ -1,0 +1,104 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="create-post">
+        <div class="create-post-input">
+          <img src="user12.jpg">
+          <textarea rows="2" id="message" placeholder="write a post"></textarea>
+        </div>
+        <div class="create-post-links">
+          <li>
+            <input type="file" id="image" accept="image/*" style="display:none">
+            <label for="image" id="pl" class="fas">&#xf030;</label>Photo
+          </li>
+          <li>
+            <input type="file" id="video" accept="video/*" style="display:none">
+            <label for="video" id="vl" class="fas">&#xf008;</label>Video
+          </li>
+          <li>
+            <button class="fas">&#xf073;</button>Event
+          </li>
+          <li>
+            <button onclick="postMessage()" style="color:blue">post</button>
+          </li>
+        </div>
+      </div>
+      <div class="sort-by">
+        <hr>
+        <p>
+          <span>
+            <img src="">
+          </span>
+        </p>
+      </div>
+      <div class="posts-container"></div>
+    </div>
+  </body>
+</html>
+
+<script>
+  // Define messages array
+  let messages = [];
+
+  // Function to add message to messages array and display messages
+  function postMessage() {
+    // Get the message input element and its value
+    let messageInput = document.getElementById("message");
+    let messageText = messageInput.value;
+
+    // Get the image and video file elements
+    let imageFile = document.getElementById("image").files[0];
+    let videoFile = document.getElementById("video").files[0];
+
+    // Create message object with text and file URLs
+    let message = {
+      text: messageText,
+      imageURL: imageFile ? URL.createObjectURL(imageFile) : "",
+      videoURL: videoFile ? URL.createObjectURL(videoFile) : "",
+    };
+
+    // Add message to messages array
+    messages.push(message);
+
+    // Call displayMessages to update UI
+    displayMessages();
+
+    // Reset message input and file inputs
+    messageInput.value = "";
+    document.getElementById("image").value = "";
+    document.getElementById("video").value = "";
+  }
+
+  // Function to display messages
+  function displayMessages() {
+    // Get the messages container element
+    let messagesContainer = document.querySelector(".posts-container");
+
+    // Clear the container
+    messagesContainer.innerHTML = "";
+
+    // Loop through the messages array and add each message to the container
+    for (let i = 0; i < messages.length; i++) {
+      let message = messages[i];
+
+      let postElement = document.createElement("div");
+      postElement.classList.add("post");
+
+      let postAuthorElement = document.createElement("div");
+      postAuthorElement.classList.add("post-author");
+
+      let imgElement = document.createElement("img");
+      imgElement.src = "user12.jpg";
+      postAuthorElement.appendChild(imgElement);
+
+      let authorDetailsElement = document.createElement("div");
+      authorDetailsElement.classList.add("author-details");
+
+      let h1Element = document.createElement("h1");
+      h1Element.textContent = "Benjamin Leo";
+      authorDetailsElement.appendChild
+    }
+}

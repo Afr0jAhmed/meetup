@@ -8,18 +8,32 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
+    
 </head>
 
 <body>
     <nav class="navbar">
         <div class="navbar-logo">
             <a href="#">
-                <img src="/Divya/image/meetup.png" alt="Logo"></a>
+                <img src="https://1000logos.net/wp-content/uploads/2021/05/Meetup-logo.png" alt="Logo"></a>
         </div>
-        <div class="search-btn">
-            <i class="fa fa-search"></i>
-            <input type="text" id="srch" placeholder="Search" />
-        </div>
+      
+        <!-- Shivani Code----------search bar--------------------------------- -->
+        
+        <div class="wrapper">
+            <div class="search-input">
+              <a href="" target="_blank" hidden></a>
+              <input type="text" placeholder="Search..">
+              <div class="autocom-box">
+                <!-- here list are inserted from javascript -->
+              </div>
+              <div class="icon"><i class="fas fa-search"></i></div>
+            </div>
+          </div>
+
+         <!-- ----------------------------------------------------- -->
+
+
         <div class="navbar-links" id="navbar-links">
             <ul>
                 <li><a href="index.html" class="active"><i class="fas fa-home">
@@ -31,18 +45,21 @@
                 <li><a href="#"><i class="fas fa-briefcase">
                             <div class="menu-items">Jobs</div>
                         </i></a></li> -->
-                <li><a href="#"><i class="fas fa-comment-alt">
+                <li><a href="message.html"><i class="fas fa-comment-alt">
                             <div class="menu-items">Messaging</div>
                         </i></a></li>
                 <li><a href="#"><i class="fas fa-bell">
-                            <div class="menu-items">Notifications</div>
+                            <div class="menu-items">News Feed</div>
                         </i></a></li>
                 <li><a href="#">
-                        <img src="image/user1.jpg" class="user-img" onclick="toggleMenu()" alt="Logo"></a>
-
-                    <!-- <div class="menu-items">Me </div> -->
-
-                    <!-- -------------profile-drop-down-menu------------    -->
+                        <img src="image/user1.jpg" class="user-img" onclick="toggleMenu()" >
+                </a>
+                <div class="menu-items">Me <i class="fas fa-angle-down" ></i></div></li>
+           
+        <a href="#"><div class="premium">Try premium</div> </a>
+    </ul>
+            </div>
+                    <!---------------profile-drop-down-menu-------------->
                     <div class="profile-menu-wrap" id="profileMenu">
                         <div class="profile-menu">
                             <div class="user-info">
@@ -80,22 +97,8 @@
                             </a>
                         </div>
                     </div>
-                    </i></a>
-                </li>
-                <li><a href="#"><i class="fas fa-grip">
-                            <div class="menu-items">Login</div>
-                        </i></a></li>
-                <li><a href="#">
-                        <div class="premium">Try premium</div>
-                    </a></li>
-            </ul>
+             </nav>      
 
-        </div>
-        <!-- <div class="navbar-toggle" id="navbar-toggle">
-            <i class="fas fa-bars"></i>
-        </div> -->
-    </nav>
-    <!------------------ navbar end --------------------->
     <div class="container-box">
         <!-- ----------------------left-sidebar-------------------------------- -->
         <div class="left-sidebar">
@@ -141,38 +144,116 @@
         </div>
         <!-- --------------------------------main-container----------------------- -->
         <div class="main-container">
-            <div class="post">
-                <div class="post-input">
-                    <img src="./image/user1.jpg">
-                    <textarea rows="2" placeholder="Write a post" id="message"></textarea>
-                </div>
-                <div class="post-links">
-                    <li><label><i class="fa-sharp fa-solid fa-camera"><input type="file" id="image" accept="image/*"
-                                    style="display:none"></label></i>Photo</li>
-                    <li><label><i class="fa-solid fa-video"><input type="file" id="video" accept="video/*"
-                                    style="display:none"></i>Vedio</li>
-                    <li><i class="fa-solid fa-calendar-days"></i>Event</li>
-                    <li><button onclick="postMessage()" style="background-color: none;">Post</button></li>
-                </div>
-            </div>
-            <div class="short-list">
-                <hr>
-                <p>Sort by: <span>top <i class="fa-sharp fa-solid fa-angle-down"></i></span></p>
-            </div>
-            <div id="messages"></div>
+            <!-- add search  -->
             <div class="posting">
                 <div class="posting-write">
-                    <img src="./image/user.jpg">
+                    <img src="image/post-img3.jpg">
                     <div>
-                        <h1>marry Farnandis</h1>
-                        <small>Founder and CEO at Gellelio Group | Angel Investor</small>
+                        <h1>Afroj Ahmed</h1>
+                        <small>Start where you are. Use what you have. Do what you can.</small>
                         <small>2 hours ago</small>
                     </div>
                 </div>
-                <p>the achieving of desired results, or someone or something that achieves positive results: We've tried
-                    to contact him, but so far without success.
+                <p>I have always wished to work with a progressive organization that would give me the opportunity to contribute and the freedom to perform. I would like to take up challenges and work with sincerity to achieve goals.
                 </p>
                 <img src="image/post-img3.jpg" width="100%">
+                <div class="post-stats">
+                    <div>
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <i class="fa-sharp fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-hands-clapping"></i>
+                        <span class="likes">Shivani rathore and 81 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 40 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="image/connection1.png" class="post-activity-user-icon">
+                        <img src="image/down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+
+                    <div class="post-activity-link">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <i class="fa-solid fa-share"></i>
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <i class="fa-solid fa-share-nodes"></i>
+                        <span>Send</span>
+                    </div>
+
+                </div>
+            </div>
+            
+            <div class="posting">
+                <div class="posting-write">
+                    <img src="image/post-img2.jpg">
+                    <div>
+                        <h1>martin</h1>
+                        <small>Start where you are. Use what you have. Do what you can.</small>
+                        <small>2 hours ago</small>
+                    </div>
+                </div>
+                <p>Founder and CEO at Gellelio Group | Angel Investor.
+                </p>
+                <img src="image/post-img2.jpg" width="100%">
+                <div class="post-stats">
+                    <div>
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <i class="fa-sharp fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-hands-clapping"></i>
+                        <span class="likes">Shivani rathore and 81 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 40 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="image/connection1.png" class="post-activity-user-icon">
+                        <img src="image/down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+
+                    <div class="post-activity-link">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <i class="fa-solid fa-share"></i>
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <i class="fa-solid fa-share-nodes"></i>
+                        <span>Send</span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="posting">
+                <div class="posting-write">
+                    <img src="image/divya1.jpg">
+                    <div>
+                        <h1>Divya Sharma</h1>
+                        <small>Opportunities don't happen, you create them.</small>
+                        <small>2 hours ago</small>
+                    </div>
+                </div>
+                <p>I am a web developer with basic skill in web designing. I can design a fascinated and responsive website in HTML CSS and java script.
+                </p>
+                <img src="image/divya1.jpg" width="100%">
                 <div class="post-stats">
                     <div>
                         <i class="fa-solid fa-thumbs-up"></i>
@@ -238,40 +319,38 @@
                         <img src="image/connection1.png" class="post-activity-user-icon">
                         <img src="image/down-arrow.png" class="post-activity-arrow-icon">
                     </div>
-                    
-                        <div class="post-activity-link">
-                            <i class="fa-solid fa-thumbs-up"></i>
-                            <span>Like</span>
-                        </div>
-                        <div class="post-activity-link">
-                            <i class="fa-solid fa-comment-dots"></i>
-                            <span>Comment</span>
-                        </div>
-                        <div class="post-activity-link">
-                            <i class="fa-solid fa-share"></i>
-                            <span>Share</span>
-                        </div>
-                        <div class="post-activity-link">
-                            <i class="fa-solid fa-share-nodes"></i>
-                            <span>Send</span>
-                        </div>
-                    
+
+                    <div class="post-activity-link">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <i class="fa-solid fa-share"></i>
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <i class="fa-solid fa-share-nodes"></i>
+                        <span>Send</span>
+                    </div>
 
                 </div>
             </div>
             <div class="posting">
                 <div class="posting-write">
-                    <img src="image/user2.jpg">
+                    <img src="image/shivani.jpg">
                     <div>
-                        <h1>Anny Roy</h1>
-                        <small>Founder and CEO at Gellelio Group | Angel Investor</small>
+                        <h1>Shivani rathor</h1>
+                        <small>Love your family, work super hard, live your passion.</small>
                         <small>2 days ago</small>
                     </div>
                 </div>
-                <p>the achieving of desired results, or someone or something that achieves positive results: We've tried
-                    to contact him, but so far without success.
+                <p>I am a student looking to working in a growth-organization which offers me challenging opportunities to enhance my profession and technical knowledge.
                 </p>
-                <img src="image/post-img2.jpg" width="100%">
+                <img src="image/shivani.jpg" width="100%">
                 <div class="post-stats">
                     <div>
                         <i class="fa-solid fa-thumbs-up"></i>
@@ -308,31 +387,103 @@
 
                 </div>
             </div>
-
-            <body>
-
-                <h2>Delete Modal</h2>
-
-                <!-- <button id="speed" onclick="document.getElementById('id01').style.display='block'">Open Modal</button> -->
-
-                <div id="id01" class="modal">
-                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
-                        title="Close Modal">×</span>
-                    <form class="modal-content" action="/action_page.php">
-                        <div class="container">
-                            <h1>Delete Account</h1>
-                            <p>Are you sure you want to delete your account?</p>
-
-                            <div class="clearfix">
-                                <button type="button" onclick="document.getElementById('id01').style.display='none'"
-                                    class="cancelbtn">Cancel</button>
-                                <button type="button" id="indel"
-                                    onclick="document.getElementById('id01').style.display='none'"
-                                    class="deletebtn">Delete</button>
-                            </div>
-                        </div>
-                    </form>
+            <div class="posting">
+                <div class="posting-write">
+                    <img src="image/user2.jpg">
+                    <div>
+                        <h1>Anny Roy</h1>
+                        <small>Founder and CEO at Gellelio Group | Angel Investor</small>
+                        <small>2 days ago</small>
+                    </div>
                 </div>
+                <p>the achieving of desired results, or someone or something that achieves positive results: We've tried
+                    to contact him, but so far without success.
+                </p>
+                <img src="image/user2.jpg" width="100%">
+                <div class="post-stats">
+                    <div>
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <i class="fa-sharp fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-hands-clapping"></i>
+                        <span class="likes">Marcol and 89 others</span>
+                    </div>
+                    <div>
+                        <span>89 comments &middot; 102 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="image/connection1.png" class="post-activity-user-icon">
+                        <img src="image/down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+
+                    <div class="post-activity-link">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <i class="fa-solid fa-share"></i>
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <i class="fa-solid fa-share-nodes"></i>
+                        <span>Send</span>
+                    </div>
+                   </div>
+                </div>
+               
+            <div class="posting">
+                <div class="posting-write">
+                    <img src="image/vishal.jpg">
+                    <div>
+                        <h1>Vishal dubey</h1>
+                        <small>Set your goals high, and don’t stop till you get there.</small>
+                        <small>2 days ago</small>
+                    </div>
+                </div>
+                <p>An Full-Stack Developer specialized in creating things that live on the Internet, whether that be Websites, Applications, or anything in between. My goal is to always build products that provide pixel-perfect, performant experiences. As I grow as a developer, I hope to write clean, readable code that can be used by others and leveraged to create beautiful software.
+                </p>
+                <img src="image/vishal.jpg" width="100%">
+                <div class="post-stats">
+                    <div>
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <i class="fa-sharp fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-hands-clapping"></i>
+                        <span class="likes">Marcol and 89 others</span>
+                    </div>
+                    <div>
+                        <span>89 comments &middot; 102 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="image/connection1.png" class="post-activity-user-icon">
+                        <img src="image/down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+
+                    <div class="post-activity-link">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <i class="fa-solid fa-share"></i>
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <i class="fa-solid fa-share-nodes"></i>
+                        <span>Send</span>
+                    </div>
+
+                </div>
+            </div>
         </div>
         <!-- --------------------------------------right-sideba-------------------------------- -->
         <div class="right-sidebar">
@@ -381,8 +532,38 @@
             </div>
         </div>
     </div>
-    <script src="doom.js"></script>
+
     <script src="script.js"></script>
+    <!-- Start of Async Drift Code -->
+<script>
+    "use strict";
+
+    !function () {
+        var t = window.driftt = window.drift = window.driftt || [];
+        if (!t.init) {
+            if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+            t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+                t.factory = function (e) {
+                    return function () {
+                        var n = Array.prototype.slice.call(arguments);
+                        return n.unshift(e), t.push(n), t;
+                    };
+                }, t.methods.forEach(function (e) {
+                    t[e] = t.factory(e);
+                }), t.load = function (t) {
+                    var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+                    o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+                    var i = document.getElementsByTagName("script")[0];
+                    i.parentNode.insertBefore(o, i);
+                };
+        }
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('gg7bm5wvziuk');
+</script>
+<!-- End of Async Drift Code -->
+<script src="doom.js"></script>
+    
 </body>
 
 </html>
