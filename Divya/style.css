@@ -859,14 +859,17 @@ color: #045be6;
 /* -----------media query----------- */
 @media only screen and (max-width:600px){
   
-  .search-btn{
+  .search-input{
     background: transparent;
     width: auto;
     padding: 0;
   }
-  .search-btn input{
+  .search-input input{
 width: 0;
 padding: 0;
+  }
+  .search-input .icon{
+    display: none;
   }
   .navbar-links ul li a .menu-items{
     display: none;
