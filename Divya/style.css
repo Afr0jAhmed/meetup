@@ -8,8 +8,10 @@ body {
    font-family: 'Lato', sans-serif;
  background-color: whitesmoke;
 }
-/* ------------search bar------------------------- */
-::selection{
+
+/* Shivani code------------search bar------------------------- */
+
+ ::selection{
   color: #fff;
   background: crimson;
 }
@@ -79,7 +81,7 @@ body {
   line-height: 40px;
   font-size: 20px;
   color: crimson;
-  cursor: pointer;
+  cursor: pointer; 
 }
 /* ------------------------------------- */
 
