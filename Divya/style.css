@@ -265,6 +265,7 @@ body {
 }
 .user-info img{
   width:50px;
+  height: 50px;
   border-radius: 50%;
   margin-right: 15px;
 }
@@ -320,7 +321,8 @@ body {
   padding: 0 25px;
 }
 .sidebar-profile-info img{
-  width: 90px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   background-color: #fff;
   padding: 4px ;
@@ -523,6 +525,7 @@ background-color: #fff;
 }
 .post-input img{
   width: 50px;
+  height: 50px;
   border-radius:50% ;
   margin-right: 10px;
 }
@@ -600,7 +603,8 @@ margin: 10px 0;
   margin-bottom: 20px;
 }
 .posting-write img{
-width: 45px;
+  width: 50px;
+  height: 50px;
 border-radius: 50%;
 margin-right: 10px;
 margin-top: 5px;
@@ -694,7 +698,8 @@ color:crimson;
   padding: 0 4% 10px;
 }
 .profile-img{
-  width: 150px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   margin-top: -75px;
   padding: 5px;
@@ -830,7 +835,8 @@ font-size: 12px;
   margin: 6px 0;
 }
 .sidebar-people-row img{
-  width: 80px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   margin-right: 8px;
   margin-top: 5px;
