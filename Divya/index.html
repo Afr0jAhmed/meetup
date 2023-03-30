@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
+    
 </head>
 
 <body>
@@ -16,10 +17,23 @@
             <a href="#">
                 <img src="image/meetup.png" alt="Logo"></a>
         </div>
-        <div class="search-btn">
+        <!-- <div class="search-btn">
             <i class="fa fa-search"></i>
             <input type="text" id="srch" placeholder="Search" />
-        </div>
+        </div> -->
+        <!-- ----------search bar--------------------------------- -->
+        <div class="wrapper">
+            <div class="search-input">
+              <a href="" target="_blank" hidden></a>
+              <input type="text" placeholder="Search..">
+              <div class="autocom-box">
+                <!-- here list are inserted from javascript -->
+              </div>
+              <div class="icon"><i class="fas fa-search"></i></div>
+            </div>
+          </div>
+         <!-- ----------------------------------------------------- -->
+
         <div class="navbar-links" id="navbar-links">
             <ul>
                 <li><a href="index.html" class="active"><i class="fas fa-home">
@@ -38,10 +52,14 @@
                             <div class="menu-items">Notifications</div>
                         </i></a></li>
                 <li><a href="#">
-                        <img src="image/user1.jpg" class="user-img" onclick="toggleMenu()" alt="Logo"></a>
-
-                    <!-- <div class="menu-items">Me </div> -->
-
+                        <img src="image/user1.jpg" class="user-img" onclick="toggleMenu()" >
+                </a>
+                <div class="menu-items">Me <i class="fas fa-angle-down" ></i></div></li>
+           
+        <a href="#"><div class="premium">Try premium</div> </a>
+        <a href="#"><div  class="Signup">Signup</div></a>
+    </ul>
+            </div>
                     <!-- -------------profile-drop-down-menu------------    -->
                     <div class="profile-menu-wrap" id="profileMenu">
                         <div class="profile-menu">
@@ -80,20 +98,8 @@
                             </a>
                         </div>
                     </div>
-                    </i></a>
-                </li>
-                <li><a href="#"><i class="fas fa-grip">
-                            <div class="menu-items">Login</div>
-                        </i></a></li>
-                <li><a href="#"><div class="premium">Try premium</div> </a></li>
-            </ul>
-           
-        </div>
-        <!-- <div class="navbar-toggle" id="navbar-toggle">
-            <i class="fas fa-bars"></i>
-        </div> -->
-    </nav>
-    <!------------------ navbar end --------------------->
+             </nav>      
+
     <div class="container-box">
         <!-- ----------------------left-sidebar-------------------------------- -->
         <div class="left-sidebar">
@@ -226,6 +232,104 @@
                     </div>
                     <div>
                         <span>54 comments &middot; 72 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="image/connection1.png" class="post-activity-user-icon">
+                        <img src="image/down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+
+                    <div class="post-activity-link">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <i class="fa-solid fa-share"></i>
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <i class="fa-solid fa-share-nodes"></i>
+                        <span>Send</span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="posting">
+                <div class="posting-write">
+                    <img src="image/user2.jpg">
+                    <div>
+                        <h1>Anny Roy</h1>
+                        <small>Founder and CEO at Gellelio Group | Angel Investor</small>
+                        <small>2 days ago</small>
+                    </div>
+                </div>
+                <p>the achieving of desired results, or someone or something that achieves positive results: We've tried
+                    to contact him, but so far without success.
+                </p>
+                <img src="image/post-img2.jpg" width="100%">
+                <div class="post-stats">
+                    <div>
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <i class="fa-sharp fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-hands-clapping"></i>
+                        <span class="likes">Marcol and 89 others</span>
+                    </div>
+                    <div>
+                        <span>89 comments &middot; 102 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="image/connection1.png" class="post-activity-user-icon">
+                        <img src="image/down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+
+                    <div class="post-activity-link">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <span>Like</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <i class="fa-solid fa-share"></i>
+                        <span>Share</span>
+                    </div>
+                    <div class="post-activity-link">
+                        <i class="fa-solid fa-share-nodes"></i>
+                        <span>Send</span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="posting">
+                <div class="posting-write">
+                    <img src="image/user2.jpg">
+                    <div>
+                        <h1>Anny Roy</h1>
+                        <small>Founder and CEO at Gellelio Group | Angel Investor</small>
+                        <small>2 days ago</small>
+                    </div>
+                </div>
+                <p>the achieving of desired results, or someone or something that achieves positive results: We've tried
+                    to contact him, but so far without success.
+                </p>
+                <img src="image/post-img2.jpg" width="100%">
+                <div class="post-stats">
+                    <div>
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <i class="fa-sharp fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-hands-clapping"></i>
+                        <span class="likes">Marcol and 89 others</span>
+                    </div>
+                    <div>
+                        <span>89 comments &middot; 102 shares</span>
                     </div>
                 </div>
                 <div class="post-activity">
