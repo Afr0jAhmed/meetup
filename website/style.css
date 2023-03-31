@@ -989,7 +989,7 @@ a:hover {
   color:blue;
 }
 
-/* --------------------------------------------------- harish part *----------------------------------/ */
+/*--------------------------------------------------- harish part ----------------------------------*/
 
 
 .message{
@@ -1030,7 +1030,7 @@ a:hover {
   }
   #dell{
     position:relative;
-    left:508px;
+    left:608px;
     bottom:25px;
     
   }
@@ -1163,141 +1163,6 @@ hr {
   border: 1px solid #545658;
   position: relative;
   bottom: 18px;
-}
-
-
-/* ------------profile-page--------------- */
-.profile-main{
-  flex-basis: 73%;
-}
-.profile-sidebar{
-  flex-basis: 25%;
-  align-self: flex-start;
-  position: sticky;
-  top: 73px;
-}
-.profile-box{
-  margin-top: 0px;
-  background: #fff;
-}
-
-.profile-box-inner{
-  padding: 0 4% 10px;
-}
-.profile-img{
-  width: 150px;
-  border-radius: 50%;
-  margin-top: -75px;
-  padding: 5px;
-  background: #fff;
-}
-.profile-box h1{
-font-size: 25px;
-font-weight: 500;
-color: #222;
-}
-.profile-box b{
-font-weight: 400;
-}
-.profile-box p{
-  margin-top: 5px;
-}
-.profile-box p a{
-  color: #045be6;
-  font-weight: 500;
-  text-decoration: none;
-}
-.connections{
-  display: flex;
-  align-items: center;
-  margin: 20px 0;
-}
-.connections img{
-  width: 30px;
-  border-radius: 50%;
-  margin-right: 5px;
-}
-.profile-btn{
-  margin: 20px 0;
-}
-.profile-btn i{
-  font-size: 15px;
-  margin-right: 10px;
-  color: #fff;
-}
-.profile-btn a{
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  background: #e4e6eb;
-padding: 6px 15px; 
-border-radius: 4px;
-margin-right: 10px;
-}
-.profile-btn .btn1{
-  background:crimson;
-  color: #fff;
-}
-.profile-description{
-  background: #fff;
-  padding: 20px 4% 30px;
-  margin: 12px 0;
-}
-.about h2{
-  color: #333;
-  margin: 10px 0 20px;
-  font-weight: 600;
-}
-.more-links{
-  text-decoration: none;
-  color: #045be6;
-  display: block;
-  text-align: right;
-  font-size: 15px;
-}
-.profile-desc-row{
-  display: flex;
-  align-items: flex-start;
-  margin: 20px 0;
-}
-.profile-desc-row img{
-  width: 50px;
-  margin-right: 25px;
-  margin-top: 5px;
-}
-.profile-desc-row div{
-  width: 100%;
-}
-.profile-desc-row h3{
-  font-size: 18px;
-  font-weight: 600;
-  color: #333;
-}
-.profile-desc-row b{
-  display: block;
-  font-weight: 400;
-  font-size: 15px;
-}
-.profile-desc-row p{
-  margin-top: 15px;
-}
-.profile-desc-row hr{
-  border: 0;
-  border-bottom:1px solid #999 ;
-  margin-top: 15px;
-}
-.exp-link{
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 20px;
-  font-weight: 500;
-  color: #045be6;
-}
-.exp-link img{
-  width: 18px;
-  margin-left: 10px;
 }
 
 /* ------------------------------------------------------------------------------------------------------ */
