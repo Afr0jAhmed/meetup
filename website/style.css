@@ -989,129 +989,9 @@ a:hover {
   color:blue;
 }
 
-/*--------------------------------------------------- harish part *----------------------------------/
+/* --------------------------------------------------- harish part *----------------------------------/ */
 
-.main-container{
-  flex-basis: 47%;
-}
-.post{
-background-color: #fff;
-}
-.post-input{
-  padding: 20px 25px 10px;
-  display: flex;
-  align-items: flex-start;
-}
-.post-input img{
-  width: 50px;
-  border-radius:50% ;
-  margin-right: 10px;
-}
-.post-input textarea{
-  width: 100%;
-  border: 0;
-  outline: 0;
-  resize: none;
-  background: transparent;
-  margin-top: 8px;
-}
-::placeholder{
-  font-weight: 500;
-}
-.post-links{
-  display: flex;
-  align-items: flex-start;
-}
-.post-links li{
-  list-style: none;
-  border-top: 1px solid #ccc;
-  border-right:1px solid #ccc ;
-  flex-basis: 25%;
-  height: 40px;
-  font-size: 13px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-.post-links li i{
-  font-size: 15px;
-  color: crimson;
-  /* color: #045be6; */
-  margin-right: 5px;
-}
-.post-links li:last-child{
-  background: crimson;
-  color: #fff;
-  border-top: 0;
-  border-right: 0;
-}
-.short-list{
-display: flex;
-align-items: center;
-margin: 10px 0;
-}
-.short-list hr{
-  flex: 1;
-  border: 0;
-  height: 1px;
-  background: #ccc;
-}
-.short-list p{
-  font-size: 13px;
-  padding-left: 5px;
-}
-.short-list p span{
-  font-weight:600 ;
-  cursor: pointer;
-}
-.short-list p span i{
-  font-size: 12px;
-  margin-left: 3px;
-  
-}
-.posting{
-  background: #fff;
-  padding:20px 25px 5px ;
-  margin:5px 0 15px ;
-}
-.posting-write{
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 20px;
-}
-.posting-write img{
-width: 45px;
-border-radius: 50%;
-margin-right: 10px;
-margin-top: 5px;
-}
-.posting-write h1{
-  font-size: 18px;
-  font-weight: 600;
-  color: #333;
-}
-.posting-write small{
-display: block;
-margin-bottom: -2px;
-}
-.posting p{
-  font-size: 14px;
-  margin-bottom: 15px;
-}
-.post-stats{
-  display: flex;
-  align-items: center;
-  justify-content:space-between;
-  flex-wrap: wrap;
-   font-size: 12px;
-   border-bottom: 1px solid #ccc;
-   padding-bottom: 6px;
-}
-.post-stats div{
-  display: flex;
-  align-items: center;
-}
+
 .message{
   border-radius:40px;
   margin-top:30px;
@@ -1120,53 +1000,6 @@ margin-bottom: -2px;
   display: none;
 }
 
-.post-stats i{
-  font-size: 15px;
-  margin-right: -5px;
-}
-.post-stats div .fa-thumbs-up{
-  color: #045be6;
-}
-.post-stats div .fa-heart{
-  color: red;
-}
-.post-stats div .fa-hands-clapping {
-color:gray;
-}
-.likes{
-  margin-left: 10px;
-}
-.post-activity{
-  display: flex;
-  align-items: center;
-  justify-content:space-between;
-   font-size: 14px;
-   font-weight: 500;
-   padding: 10px 0;
-}
-.post-activity div{
-  display: flex;
-  align-items: center;
-}
-.post-activity-user-icon{
-  width: 22px;
-  border-radius: 50%;
-}
-.post-activity-arrow-icon{
-  width: 12px;
-  margin-left: 5px;
-}
-.post-activity-link i{
-font-size: 18px;
-margin-right: 20px;
-color:crimson;
-}
-#icon-color{
-  font-size: 10px;
-  margin-right:40px;
-  padding-left:40px;
-  color:crimson;
-  }
   #suc{
     border-radius: 50%;
     width:50px;
@@ -1227,7 +1060,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 /* Set a style for all buttons */
 button {
-  background-color: #04AA6D;
+  background-color: crimson;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -1237,9 +1070,9 @@ button {
   opacity: 0.9;
 }
 
-button:hover {
+/* button:hover {
   opacity:1;
-}
+} */
 
 /* Float cancel and delete buttons and add an equal width */
 .cancelbtn, .deletebtn {
