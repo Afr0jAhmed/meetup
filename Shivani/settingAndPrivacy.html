@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .settings-container,
+.privacy-container {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.settings-container h2,
+.privacy-container h2 {
+  margin-top: 0;
+}
+
+.settings-container label,
+.privacy-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.settings-container input[type="text"],
+.settings-container input[type="email"],
+.settings-container input[type="password"],
+.privacy-container select {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.checkbox-group label {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="settings-container">
+        <h2>Settings</h2>
+        <form id="settings-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password">
+          <label for="confirm-password">Confirm Password:</label>
+          <input type="password" id="confirm-password" name="confirm-password">
+          <button type="submit" onclick="savedChanges()" id="saved">Save Changes</button>
+        </form>
+      </div>
+      
+      <div class="privacy-container">
+        <h2>Privacy</h2>
+        <form id="privacy-form">
+          <label for="visibility">Visibility:</label>
+          <select id="visibility" name="visibility">
+            <option value="public">Public</option>
+            <option value="private">Private</option>
+            <option value="friends">Friends Only</option>
+          </select>
+          <label for="notifications">Notifications:</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" id="notifications-email" name="notifications-email">Email</label>
+            <label><input type="checkbox" id="notifications-sms" name="notifications-sms">SMS</label>
+            <label><input type="checkbox" id="notifications-push" name="notifications-push">Push Notifications</label>
+          </div>
+          <button type="submit" onclick="savedChanges()" id="saved">Save Changes</button>
+        </form>
+      </div>
+      
+      <script>
+        
+  var settingsForm = document.getElementById('settings-form');
+  var privacyForm = document.getElementById('privacy-form');
+
+  function saveSettings(event) {
+    event.preventDefault();
+    // Make AJAX request to save settings
+    $.ajax({
+      type: 'POST',
+      url: 'save-settings.php',
+      data: $(settingsForm).serialize(),
+      success: function(response) {
+        if (response === 'success') {
+          alert('Settings saved successfully.');
+        } else {
+          alert('An error occurred while saving settings. Please try again later.');
+        }
+      },
+      error: function(xhr, status, error) {
+        alert('An error occurred while saving settings. Please try again later.');
+      }
+    });
+  }
+
+  function savePrivacy(event) {
+    event.preventDefault();
+    // Make AJAX request to save privacy settings
+    $.ajax({
+      type: 'POST',
+      url: 'save-privacy.php',
+      data: $(privacyForm).serialize(),
+      success: function(response) {
+        if (response === 'success') {
+          alert('Privacy settings saved successfully.');
+        } else {
+          alert('An error occurred while saving privacy settings. Please try again later.');
+        }
+      },
+      error: function(xhr, status, error) {
+        alert('An error occurred while saving privacy settings. Please try again later.');
+      }
+    });
+  }
+
+  settingsForm.addEventListener('submit', saveSettings);
+  privacyForm.addEventListener('submit', savePrivacy);
+
+
+  function savedChanges(){
+    document.getElementById("saved");
+    alert(" Changes Successuful Saved ")
+  }
+  
+</script>
+
+      </script>
+</body>
+</html>
