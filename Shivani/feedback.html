@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+      body{
+        background: rgb(198, 240, 233);
+      }
+ .feedback {
+  margin: 50px auto;
+  max-width: 600px;
+  text-align: center;
+
+}
+h2{
+  font-size: 50px;
+}
+p{
+  font-size: 20px;
+}
+
+.stars {
+  display: inline-block;
+  /* margin-bottom: 20px; */
+ 
+}
+
+.fa-star {
+  font-size: 24px;
+  color: #ccc;
+  transition: color 0.2s;
+  
+}
+
+.fa-star:hover,
+.fa-star.checked {
+  color: blue;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+#feedback{
+  font-size: 15px;
+}
+
+button {
+  background-color: rgb(218, 46, 81);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(211, 3, 44);
+}
+
+#success {
+  color: crimson;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="feedback">
+        <h2>Feedback and Rating</h2>
+        <p>Please rate your experience:</p>
+        <div class="stars">
+          <input type="radio" name="rating" id="star1" value="1">
+          <label for="star1"><i class="fa fa-star"></i></label>
+          <input type="radio" name="rating" id="star2" value="2">
+          <label for="star2"><i class="fa fa-star"></i></label>
+          <input type="radio" name="rating" id="star3" value="3">
+          <label for="star3"><i class="fa fa-star"></i></label>
+          <input type="radio" name="rating" id="star4" value="4">
+          <label for="star4"><i class="fa fa-star"></i></label>
+          <input type="radio" name="rating" id="star5" value="5">
+          <label for="star5"><i class="fa fa-star"></i></label>
+        </div>
+        <p>Please leave your feedback:</p>
+        <textarea id="feedback" placeholder="Enter your feedback here"></textarea>
+        <button id="submit" onclick="submitFeedback()">Submit</button>
+        <p id="success"></p>
+      </div>
+
+    
+      <script>
+        function submitFeedback() {
+  // Get the selected rating
+  var rating = document.querySelector('input[name="rating"]:checked');
+  // Get the feedback text
+  var feedback = document.getElementById('feedback').value;
+  // Check if a rating is selected and feedback is entered
+  if (rating && feedback) {
+    // Show success message
+    document.getElementById('success').innerHTML = 'Feedback submitted successfully!';
+    // Clear the form
+    document.querySelector('input[name="rating"]:checked').checked = false;
+    document.getElementById('feedback').value = '';
+  } else {
+    // Show error message
+    alert('Please select a rating and enter your feedback.');
+  }
+}
+      </script>
+</body>
+</html>
