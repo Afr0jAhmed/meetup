@@ -5,145 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Meetup</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
-    <style type="text/css">
-        @keyframes ldio-lddt9rzoras {
-            0% {
-                opacity: 1
-            }
-
-            100% {
-                opacity: 0
-            }
-        }
-
-        .ldio-lddt9rzoras div {
-            left: 94px;
-            top: 48px;
-            position: absolute;
-            animation: ldio-lddt9rzoras linear 1s infinite;
-            background: #eb0331;
-            width: 12px;
-            height: 24px;
-            border-radius: 6px / 12px;
-            transform-origin: 6px 52px;
-        }
-
-        /* center the loader */
-        .loadingio-spinner-spinner-r2z3c442ak {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .ldio-lddt9rzoras div:nth-child(1) {
-            transform: rotate(0deg);
-            animation-delay: -0.9166666666666666s;
-            background: #eb0331;
-        }
-
-        .ldio-lddt9rzoras div:nth-child(2) {
-            transform: rotate(30deg);
-            animation-delay: -0.8333333333333334s;
-            background: #eb0331;
-        }
-
-        .ldio-lddt9rzoras div:nth-child(3) {
-            transform: rotate(60deg);
-            animation-delay: -0.75s;
-            background: #eb0331;
-        }
-
-        .ldio-lddt9rzoras div:nth-child(4) {
-            transform: rotate(90deg);
-            animation-delay: -0.6666666666666666s;
-            background: #eb0331;
-        }
-
-        .ldio-lddt9rzoras div:nth-child(5) {
-            transform: rotate(120deg);
-            animation-delay: -0.5833333333333334s;
-            background: #eb0331;
-        }
-
-        .ldio-lddt9rzoras div:nth-child(6) {
-            transform: rotate(150deg);
-            animation-delay: -0.5s;
-            background: #eb0331;
-        }
-
-        .ldio-lddt9rzoras div:nth-child(7) {
-            transform: rotate(180deg);
-            animation-delay: -0.4166666666666667s;
-            background: #eb0331;
-        }
-
-        .ldio-lddt9rzoras div:nth-child(8) {
-            transform: rotate(210deg);
-            animation-delay: -0.3333333333333333s;
-            background: #eb0331;
-        }
-
-        .ldio-lddt9rzoras div:nth-child(9) {
-            transform: rotate(240deg);
-            animation-delay: -0.25s;
-            background: #eb0331;
-        }
-
-        .ldio-lddt9rzoras div:nth-child(10) {
-            transform: rotate(270deg);
-            animation-delay: -0.16666666666666666s;
-            background: #eb0331;
-        }
-
-        .ldio-lddt9rzoras div:nth-child(11) {
-            transform: rotate(300deg);
-            animation-delay: -0.08333333333333333s;
-            background: #eb0331;
-        }
-
-        .ldio-lddt9rzoras div:nth-child(12) {
-            transform: rotate(330deg);
-            animation-delay: 0s;
-            background: #eb0331;
-        }
-
-        .loadingio-spinner-spinner-r2z3c442ak {
-            width: 200px;
-            height: 200px;
-            display: inline-block;
-            overflow: hidden;
-            background: #ffffff;
-        }
-
-        .ldio-lddt9rzoras {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            transform: translateZ(0) scale(1);
-            backface-visibility: hidden;
-            transform-origin: 0 0;
-            /* see note above */
-        }
-
-        .ldio-lddt9rzoras div {
-            box-sizing: content-box;
-        }
-    </style>
-    <script>
-        // to remove the loader as soon as the page loads
-        window.addEventListener("load", function () {
-            const loader = document.querySelector(".loadingio-spinner-spinner-r2z3c442ak");
-            loader.style.display = "none";
-            // setTimeout(function () {
-            //     loader.style.display = "none";
-            // }, 1000); // delay
-        });
-
-    </script>
+    <link rel="icon" type="image/x-icon" href="image/Meetup_Logo.png">
+    
 </head>
 
 <body>
@@ -205,55 +71,52 @@
                             <div class="menu-items">News Feed</div>
                         </i></a></li>
                 <li><a href="#">
-                        <img src="image/user1.jpg" class="user-img" onclick="toggleMenu()">
-                    </a>
-                    <div class="menu-items">Me <i class="fas fa-angle-down"></i></div>
-                </li>
-
-                <a href="#">
-                    <div class="premium">Try premium</div>
+                        <img src="image/user1.jpg" class="user-img" onclick="toggleMenu()" >
                 </a>
-            </ul>
-        </div>
-        <!---------------profile-drop-down-menu-------------->
-        <div class="profile-menu-wrap" id="profileMenu">
-            <div class="profile-menu">
-                <div class="user-info">
-                    <img src="image/user1.jpg">
-                    <div>
-                        <h3>Divya sharma</h3>
-                        <a href="profile.html">see your profile</a>
-                    </div>
-                </div>
-                <hr>
-                <a href="feedback.html" class="profile-menu-link">
-                    <img src="image/feedback.png">
-                    <p>Give Feedback</p>
-                    <span>></span>
-                </a>
-                <a href="#" class="profile-menu-link">
-                    <img src="image/setting.png">
-                    <p>Setting & Privacy</p>
-                    <span>></span>
-                </a>
-                <a href="#" class="profile-menu-link">
-                    <img src="image/help-and-support.png">
-                    <p>Help & support</p>
-                    <span>></span>
-                </a>
-                <a href="#" class="profile-menu-link">
-                    <img src="image/display.png">
-                    <p>Display & Accessibility</p>
-                    <span>></span>
-                </a>
-                <a href="#" class="profile-menu-link">
-                    <img src="image/Logout.png">
-                    <p>Logout</p>
-                    <span>></span>
-                </a>
+                <div class="menu-items">Me <i class="fas fa-angle-down" ></i></div></li>
+           
+        <a href="#"><div class="premium">Try premium</div> </a>
+    </ul>
             </div>
-        </div>
-    </nav>
+                    <!---------------profile-drop-down-menu-------------->
+                    <div class="profile-menu-wrap" id="profileMenu">
+                        <div class="profile-menu">
+                            <div class="user-info">
+                                <img src="image/user1.jpg">
+                                <div>
+                                    <h3>Divya sharma</h3>
+                                    <a href="profile.html">see your profile</a>
+                                </div>
+                            </div>
+                            <hr>
+                            <a href="feedback.html" class="profile-menu-link">
+                                <img src="image/feedback.png">
+                                <p>Give Feedback</p>
+                                <span>></span>
+                            </a>
+                            <a href="settingAndPrivacy.html" class="profile-menu-link">
+                                <img src="image/setting.png">
+                                <p>Setting & Privacy</p>
+                                <span>></span>
+                            </a>
+                            <a href="helpAndSupport.html" class="profile-menu-link">
+                                <img src="image/help-and-support.png">
+                                <p>Help & support</p>
+                                <span>></span>
+                            </a>
+                            <a href="#" class="profile-menu-link">
+                                <img src="image/display.png">
+                                <p>Display & Accessibility</p>
+                                <span>></span>
+                            </a>
+                            <a href="#" class="profile-menu-link">
+                                <img src="image/Logout.png">
+                                <p>Logout</p>
+                                <span>></span>
+                            </a>
+                        </div>
+                    </div>
+             </nav>      
 
     <div class="container-box">
         <!-- ----------------------left-sidebar-------------------------------- -->
