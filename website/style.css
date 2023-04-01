@@ -87,7 +87,7 @@ body {
 
 
 .navbar {
-  height: 8vh;
+  height: 9vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -100,11 +100,11 @@ body {
   z-index: 100;
 }
 
-.navbar-logo a img {
+/* .navbar img {
   width: 5rem;
   height: 45px;
   padding-left: 5rem;
-}
+} */
 .search-btn{
   display: flex;
   align-items: center;
@@ -166,10 +166,10 @@ body {
 .navbar-links li a::after {
   content: '';
   width: 0;
-  height: 2px;
+  height: 3px;
   background: crimson;
   position: absolute;
-  top: 2.2rem;
+  top: 2.5rem;
   transition: width 0.3s;
 }
 
@@ -193,7 +193,7 @@ body {
 
 .user-img {
   width: 40px;
-  height: 35px;
+  height: 40px;
   border-radius: 50%;
   display: block;
   cursor: pointer;
