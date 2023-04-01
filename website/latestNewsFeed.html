@@ -1,153 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 
-    <style>
-      body{
-        background: rgb(250, 177, 177);
-      }
-     .search-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
- 
-  
-}
+  <style>
+    .search-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-#search-input {
-  margin-top: 100px;
-  font-size: 25px;
-  border: 3px solid crimson;
-}
-#search-input input{
-    font-size: 20px;
-    border: none;
-    border: 3px solid crimson;
-}
-#search-input:focus{
-    outline: none;
-    box-shadow: 2px 2px crimson;
-}
-#recent-searches {
-  text-align: center;
-  font-size: 20px;
-  margin-top: 20px;
- 
-}
-
-#news-container {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 40%;
-  max-height: 400px;
-  overflow-y: scroll;
-  margin: 0 auto;
-  justify-content: center;
-  text-align: center;
-  margin-top: 20px;
-}
-span{
-  margin: 10px;
-}
-
-    </style>
-</head>
-<body>
-     <div class="search-container">
-      <input type="text" id="search-input" placeholder="Search">
-     <br>
-    </div>
-      <div id="recent-searches"></div>
-    <span id="news-container" ></span> 
-
-    <script>
- // This API supports category wise news. Here is a complete list of all categories.
-
-// national = not working
-// business = working
-// sports  = not working
-// world = not working
-// politics = not working
-// technology =  working
-// startup = not working
-// entertainment = working
-// miscellaneous = working
-// hatke = working
-// science = working
-// automobile = working
-// apple = working
-
-const searchInput = document.getElementById("search-input");
-const recentSearches = document.getElementById("recent-searches");
-const newsContainer = document.getElementById("news-container");
-let searchHistory = [];
-
-function getNews(searchTerm) {
-  // Clear the news container
-  newsContainer.innerHTML = "";
-
-  // Fetch news data
-  fetch(`https://inshorts.deta.dev/news?category=${searchTerm}`)
-    .then((response) => response.json())
-    .then((data) => {
-      // Display the news articles
-      console.log(data);
-      data.data.forEach((article) => {
-        const newsCard = document.createElement("div");
-        newsCard.classList.add("news-card");
-
-        const newsTitle = document.createElement("div");
-        newsTitle.classList.add("news-card-title");
-        newsTitle.innerText = article.title;
-        console.log(newsTitle);
-
-        const newsContent = document.createElement("div");
-        newsContent.classList.add("news-card-content");
-        newsContent.innerText = article.content;
-
-        newsCard.appendChild(newsTitle);
-        newsCard.appendChild(newsContent);
-        newsContainer.appendChild(newsCard);
-      });
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-
-  // Update recent searches
-  if (searchHistory.indexOf(searchTerm) === -1) {
-    searchHistory.push(searchTerm);
-
-    const searchLink = document.createElement("a");
-    searchLink.classList.add("search-link");
-    searchLink.href = "#";
-    searchLink.innerText = searchTerm;
-    searchLink.addEventListener("click", () => {
-      searchInput.value = searchTerm;
-      getNews(searchTerm);
-    });
-
-    const searchItem = document.createElement("span");
-    searchItem.classList.add("search-item");
-    searchItem.appendChild(searchLink);
-
-    recentSearches.insertBefore(searchItem, recentSearches.firstChild);
-  }
-}
-
-searchInput.addEventListener("keydown", (event) => {
-  if (event.keyCode === 13) {
-    const query = searchInput.value.trim();
-    if (query.length > 0) {
-      getNews(query);
-      searchInput.value = "";
     }
-  }
-});
-    </script>
+
+    #search-input {
+      /* margin-top: 100px; */
+      font-size: 25px;
+      border: 3px solid crimson;
+    }
+
+    #search-input input {
+      font-size: 20px;
+      border: none;
+      border: 3px solid crimson;
+    }
+
+    #search-input:focus {
+      outline: none;
+      box-shadow: 2px 2px crimson;
+    }
+
+    #recent-searches {
+      text-align: center;
+      font-size: 20px;
+      margin-top: 20px;
+
+
+    }
+
+    #news-container {
+      display: flex;
+      flex-wrap: wrap;
+      /* max-width: 90%; */
+      max-height: 400px;
+      /* overflow-y: scroll; */
+      margin: 0 auto;
+      justify-content: center;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .news-card-title {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .news-card {
+      border: 10px solid rgba(223, 205, 205, 0.975);
+    }
+
+    span {
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="search-container">
+    <input type="text" id="search-input" placeholder="Search">
+    <br>
+  </div>
+  <div id="recent-searches"></div>
+  <span id="news-container"></span>
+
+  <script>
+    // This API supports category wise news. Here is a complete list of all categories.
+
+    // national = not working
+    // business = working
+    // sports  = not working
+    // world = not working
+    // politics = not working
+    // technology =  working
+    // startup = not working
+    // entertainment = working
+    // miscellaneous = working
+    // hatke = working
+    // science = working
+    // automobile = working
+    // apple = working
+
+    const searchInput = document.getElementById("search-input");
+    const recentSearches = document.getElementById("recent-searches");
+    const newsContainer = document.getElementById("news-container");
+    let searchHistory = [];
+
+    function getNews(searchTerm) {
+      // Clear the news container
+      newsContainer.innerHTML = "";
+
+      // Fetch news data
+      fetch(`https://inshorts.deta.dev/news?category=${searchTerm}`)
+        .then((response) => response.json())
+        .then((data) => {
+          // Display the news articles
+          console.log(data);
+          data.data.forEach((article) => {
+            const newsCard = document.createElement("div");
+            newsCard.classList.add("news-card");
+
+            const newsTitle = document.createElement("div");
+            newsTitle.classList.add("news-card-title");
+            newsTitle.innerText = article.title;
+            console.log(newsTitle);
+
+            const newsImage = document.createElement("img");
+            newsImage.classList.add("news-card-image");
+            newsImage.src = article.imageUrl;
+            console.log(newsImage);
+
+            const newsContent = document.createElement("div");
+            newsContent.classList.add("news-card-content");
+            newsContent.innerText = article.content;
+
+
+            newsCard.appendChild(newsTitle);
+            newsCard.appendChild(newsImage);
+            newsCard.appendChild(newsContent);
+            newsContainer.appendChild(newsCard);
+          });
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+
+      // Update recent searches
+      if (searchHistory.indexOf(searchTerm) === -1) {
+        searchHistory.push(searchTerm);
+
+        const searchLink = document.createElement("a");
+        searchLink.classList.add("search-link");
+        searchLink.href = "#";
+        searchLink.innerText = searchTerm;
+        searchLink.addEventListener("click", () => {
+          searchInput.value = searchTerm;
+          getNews(searchTerm);
+        });
+
+        const searchItem = document.createElement("span");
+        searchItem.classList.add("search-item");
+        searchItem.appendChild(searchLink);
+
+        recentSearches.insertBefore(searchItem, recentSearches.firstChild);
+      }
+    }
+
+    searchInput.addEventListener("keydown", (event) => {
+      if (event.keyCode === 13) {
+        const query = searchInput.value.trim();
+        if (query.length > 0) {
+          getNews(query);
+          searchInput.value = "";
+        }
+      }
+    });
+  </script>
 </body>
+
 </html>
