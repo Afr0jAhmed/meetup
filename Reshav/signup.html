@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src=" https://dev.anthonyfessy.com/lottie.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Register here</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="forms-container">
+      <div class="signup signin-signup">
+        <nav action="" class="sign-in-form">
+          <span id="error" style="color: #e00437;"></span>
+          <h2 class="title">Register Now!..</h2>
+          <div class="input-field">
+            <i class="fa fa-link"></i>
+            <input type="url" placeholder="Enter Profile url" class="textinput" id="nameInp" required/>
+          </div>
+          <div class="input-field">
+            <i class="fa fa-envelope"></i>
+            <input type="email" placeholder="Enter Email" class="textinput" id="emailInp" required/>
+          </div>
+          <div class="input-field">
+            <i class="fa fa-user"></i>
+            <input type="text" placeholder="Enter Full name" class="textinput" id="userInp" required/>
+          </div>
+          <div class="input-field">
+            <i class="fa fa-lock"></i>
+            <input type="password" placeholder="Enter Password" class="textinput" id="passInp" required/>
+            <i class="fa fa-eye" id="togglePassword" style="cursor: pointer;"></i>
+          </div>
+          <button type="text" id="sub_btn" class="btn solid">Sign Up</button><br>
+          <div class="social-container ">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-google"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+    
+    <div class="panels-container">
+     
+      <div class="panel left-panel">
+        <div class="content">
+          <img height=145px width=250px src="https://1000logos.net/wp-content/uploads/2021/05/Meetup-logo.png">
+          <h3>You don't have an account?</h3>
+          <p>Create your account right now to follow people and like publications</p>
+          <a href="index.html" class="badge-secondary"><button class="btn transparent" id="sign-up-btn">Log
+              in</button></a>
+        </div>
+      </div>
+    </div>
+    <div id="box">
+      <div id="success"><h1>Thank You!</h1> <h3>Registration Completed</h3></div></div>
+  </div>
+</body>
+<script>
+  const togglePassword = document.querySelector("#togglePassword");
+  const password = document.querySelector("#passInp");
+
+  togglePassword.addEventListener("click", function (e) {
+    const type =
+      password.getAttribute("type") === "password" ? "text" : "password";
+    password.setAttribute("type", type);
+    this.classList.toggle("fa-eye-slash");
+  });
+</script>
+<script type="module" src="signup.js"></script>
+
+</html>
