@@ -1,53 +1,74 @@
-
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>LinkedIn Messaging</title>
-    <link rel="stylesheet" href="messagestyles.css">
-  </head>
-  <body>
-    <div id="container">
-      <div id="threads">
-        <h2>Messages</h2>
-        <ul>
-          <li class="active">John Smith</li>
-          <li>Jane Doe</li>
-          <li>Bob Johnson</li>
-        </ul>
+
+<head>
+  <meta charset="UTF-8">
+  <title>LinkedIn Messaging</title>
+  <link rel="stylesheet" href="messagestyles.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="threads">
+      <h2>Messages</h2>
+      <ul>
+        <li class="active">John Smith</li>
+        <li>Jane Doe</li>
+        <li>Bob Johnson</li>
+      </ul>
+    </div>
+    <div id="messages">
+      <div id="header">
+        <h2>John Smith</h2>
+        <button id="new-message-button">New Message</button>
       </div>
-      <div id="messages">
-        <div id="header">
-          <h2>John Smith</h2>
-          <button id="new-message-button">New Message</button>
+      <div class="message">
+        <div class="message-header">
+          <img src="https://via.placeholder.com/50x50" alt="User profile picture">
+          <span>John Smith</span>
         </div>
-        <div class="message">
-          <div class="message-header">
-            <img src="https://via.placeholder.com/50x50" alt="User profile picture">
-            <span>John Smith</span>
-          </div>
-          <div class="message-body">
-            <p>Hello Jane, how are you doing today?</p>
-            <p>I was wondering if you would be available to meet up for coffee sometime this week.</p>
-            <span class="timestamp">Sent at 10:38am</span>
-          </div>
+        <div class="message-body">
+          <p>Hello Jane, how are you doing today?</p>
+          <p>I was wondering if you would be available to meet up for coffee sometime this week.</p>
+          <span class="timestamp">Sent at 10:38am</span>
         </div>
-        <div class="message sent">
-          <div class="message-header">
-            <img src="https://via.placeholder.com/50x50" alt="User profile picture">
-            <span>You</span>
-          </div>
-          <div class="message-body">
-            <p>Hi John, I'm doing well, thanks for asking.</p>
-            <p>Sure, I would love to meet up for coffee. How about Wednesday at 2pm?</p>
-            <span class="timestamp">Sent at 10:35am</span>
-          </div>
+      </div>
+      <div class="message sent">
+        <div class="message-header">
+          <img src="https://via.placeholder.com/50x50" alt="User profile picture">
+          <span>You</span>
         </div>
-        <form id="new-message-form">
-          <textarea placeholder="Type your message here"></textarea>
-          <button type="submit">Send</button>
-        </form>
+        <div class="message-body">
+          <p>Hi John, I'm doing well, thanks for asking.</p>
+          <p>Sure, I would love to meet up for coffee. How about Wednesday at 2pm?</p>
+          <span class="timestamp">Sent at 10:35am</span>
+        </div>
+      </div>
+      <div id="message">
+
+      </div>
+
+      <form id="new-message-form">
+        <textarea placeholder="Type your message here" id="message"></textarea>
+        <!-- <button type="submit" onclick="postMessage()">Send</button> -->
+      </form>
+
+      <div class="post">
+        <!-- <div class="post-input">
+
+          <textarea rows="2" placeholder="Write a post" id="message"></textarea>
+        </div> -->
+        <div class="post-links">
+          <!-- <li><label><i class="fa-sharp fa-solid fa-camera"><input type="file" id="image" accept="image/*"
+                  style="display:none"></label></i>Photo</li>
+          <li><label><i class="fa-solid fa-video"><input type="file" id="video" accept="video/*"
+                  style="display:none"></i>Video</li> -->
+
+          <button onclick="postMessage()" style="background-color: none;">Send</button>
+        </div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
